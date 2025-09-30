@@ -21,3 +21,127 @@ body {
   width: 1240px;
   margin: 0 auto;
 }
+
+.swiper {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color:  #008cff;
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: #BCE1FF
+;
+}
+.swiper-slide:nth-child(3n) {
+  background-color: #D8EDFD;
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: #008cff;
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: #BCE1FF;
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: #D8EDFD;
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: #008cff;
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: #BCE1FF;
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: #D8EDFD;
+}
+.mySwiper .swiper-slide-active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+.mySwiper .swiper-wrapper:has(.swiper-slide-active) .swiper-slide {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mySwiper .swiper-wrapper:has(.swiper-slide-active)
+  .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.5;
+}
+
+.mySwiper .swiper-wrapper:has(.swiper-slide-active)
+  .swiper-slide.swiper-slide-active ~ .swiper-slide {
+  opacity: 1;
+  visibility: visible;
+}
+.mySwiper .swiper-wrapper:has(.swiper-slide-active)
+  .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-active ~ .swiper-slide) {
+  opacity: 0;
+  visibility: hidden;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-button-next svg{
+  transform: rotate(180deg);
+}
+.swiper-button-next , .swiper-button-prev {
+color: white !important;
+position: absolute;
+border: 0.1px solid rgba(255, 255, 255, 0.842);
+border-radius: 100%;
+padding: 3px;
+cursor: pointer;
+}
+.swiper-button-next {
+  right: 40px;
+  bottom: 8px;
+  z-index: 10000;
+}
+.swiper-button-prev{
+  right: 15px;
+  bottom: 8.5px;
+  z-index: 100000;
+}
+.swiper-button-prev svg , .swiper-button-next svg {
+  width: 10px;
+  height: 10px;
+}
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 100% !important;
+  z-index: 10000000 !important;
+}
+.swiper-pagination-bullet-active {
+  background-color:#1846DA !important;
+}
+.swiper-pagination-bullets {
+  background-color: #6daad591;
+  width: fit-content !important;
+  border-radius: 40px;
+  padding: 0 10px;
+  margin-left: 8px;
+  z-index: 10000;
+}
