@@ -9,7 +9,8 @@ function CourseCart({ course }: CourseCartProps) {
   return (
     <div>
       <div className="p-2 h-80 relative">
-        <div className=" relative w-[290px] h-[350px] bg-white mt-2 z-10 text-white rounded-md">
+        <div className=" relative w-[290px]  bg-white mt-2 z-10 text-white rounded-md">
+          
           <div className=" absolute bottom-14 w-full ">
             <div className="bg-boxGrey opacity-50 h-[1px] w-full bottom-0"></div>
           </div>
@@ -46,11 +47,11 @@ function CourseCart({ course }: CourseCartProps) {
             </div>
           </div>
           <div>
-            <div className="w-60 mt-6 font-semibold">
+            <div className="w-60 mt-6 font-semibold text-[14px] leading-6">
               <h4>{course.title}</h4>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center h-16">
                 <div className="w-10 h-10 my-4 bg-boxGrey rounded-full"></div>
-                <div className="font-light">
+                <div className="font-light text-[12px]">
                   {course.date.day}
                   {course.date.month}
                   {course.date.year} - ساعت
@@ -59,8 +60,8 @@ function CourseCart({ course }: CourseCartProps) {
               </div>
             </div>
           </div>
-          <div className="flex justify-between items-center text-primaryColor font-semibold ">
-            <div className="flex gap-1 w-32 px-2 py-1 justify-center border mt-2 rounded-sm  border-primaryColor cursor-pointer">
+          <div className="flex justify-between items-center mb-20 text-primaryColor font-semibold">
+            <div className="flex gap-1 w-[115px] h-9 items-center justify-center border mt-2 rounded-sm  border-primaryColor cursor-pointer text-[12px]">
               <p>اطلاعات دوره</p>
                 <Image
                   src="/images/icons/blue-diagonal.svg"

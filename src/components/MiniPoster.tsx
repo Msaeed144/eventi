@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 function MiniPoster() {
   return (
-    <div className='h-80 xl:w-[30%] w-[280px]'>
-        <Image src="/images/pics/poster.png" width={335} height={485} alt="پوستر" />
+    <div className='h-80'>
+        <Image src="/images/pics/poster.png" width={350} height={500} alt="پوستر" />
     </div>
   )
 }
