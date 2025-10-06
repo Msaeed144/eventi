@@ -46,3 +46,8 @@ export interface Course {
   descriptions: CourseDescriptions;
   courseTitles: CourseTitle[];
 }
+export interface Organaizer {
+    id:number;
+    name:string;
+    rate:number
+}

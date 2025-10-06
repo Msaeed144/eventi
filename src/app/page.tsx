@@ -1,23 +1,30 @@
-import Courses from "@/components/Courses";
+import Accesses from "@/components/Accesses";
+import Courses from "@/components/courses/Courses";
+import FreeCourses from "@/components/courses/FreeCourses";
+import LastCourses from "@/components/courses/LastCourses";
 import ExamsBanner from "@/components/ExamsBanner";
-import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import MainSlider from "@/components/MainSlider";
 import MiniPoster from "@/components/MiniPoster";
-import SpecialCourses from "@/components/SpecialCourses";
-
+import Organizers from "@/components/Organizers";
+import ResumeLandingSection from "@/components/ResumeLandingSection";
 export default function Home() {
   return (
     <div className="bg-secondaryColor">
-      <Header />
       <div className="xl:mr-8 ">
-        <div className="mt-5 flex xl:gap-12  gap-2 justify-between container mx-auto">
+        <div className="mt-5 flex xl:gap-6  gap-1 justify-between container mx-auto">
           <MainSlider />
           <MiniPoster />
         </div>
       </div>
-      <SpecialCourses />
+      <LastCourses />
       <Courses />
       <ExamsBanner />
+      <FreeCourses />
+      <Organizers />
+      <ResumeLandingSection />
+      <Accesses />
+      <Footer />
     </div>
   );
 }

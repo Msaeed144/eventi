@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import SpecialCourseSlider from "./courses/SpecialCourseSlider";
+import SpecialCourseSlider from "./SpecialCourseSlider";
 
 function SpecialCourses() {
   return (
@@ -23,7 +23,7 @@ function SpecialCourses() {
         </div>
         <div>
         <div className="w-full relative">
-            <div className="w-[96%] h-96 mx-auto">
+            <div className="w-[96%] h-96 mx-auto mt-6">
                 <SpecialCourseSlider />
             </div>
         </div>

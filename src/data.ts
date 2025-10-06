@@ -2415,3 +2415,101 @@ export const courses = [
         ]
     },
 ]
+export const organizers = [
+    {
+        id:1001,
+        name:"مهدی عباسی",
+        rate:4.5
+    },
+    {
+        id:1002,
+        name:"عباس مهدوی",
+        rate:4.7
+    },
+    {
+        id:1003,
+        name:"رضا امیری",
+        rate:4.9
+    },
+    {
+        id:1004,
+        name:"امیر رضوی",
+        rate:3.8
+    },
+    {
+        id:1005,
+        name:"سعید مرتضوی",
+        rate:2.5
+    },
+    {
+        id:1006,
+        name:"مرتضی سعیدی",
+        rate:2
+    },
+    {
+        id:1007,
+        name:"علی رشیدی",
+        rate:5
+    },
+    {
+        id:1008,
+        name:"رشید علوی",
+        rate:4.5
+    },
+    {
+        id:1009,
+        name:"محمد صادقی",
+        rate:4.1
+    },
+
+]
+export const categories = [
+    {
+        name:"آموزشی",
+        value:"education"
+    },
+        {
+        name:"تشکیلاتی",
+        value:"organizational"
+    },
+    {
+        name:"رسانه",
+        value:"media",
+    },
+    {
+        name:"تبیین",
+        value:"explanation"
+    },
+    {
+        name:"جهادی",
+        value:"jihadi"
+    },
+        {
+        name:"کسب و کار",
+        value:"job"
+    },
+        {
+        name:"تکنولوژی",
+        value:"technology"
+    },
+        {
+        name:"فنی و مهندسی و صنعت",
+        value:"engineering"
+    },
+        {
+        name:"توسعه فردی و خانواده",
+        value:"family"
+    },
+        {
+        name:"مدیریت",
+        value:"management"
+    },
+        {
+        name:"جهادی",
+        value:"jihadi1"
+    },
+        {
+        name:"جهادی",
+        value:"jihadi2"
+    },
+]

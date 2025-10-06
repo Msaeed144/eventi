@@ -3,8 +3,17 @@ import Image from "next/image";
 
 function ExamsBanner() {
   return (
-    <div className="examBanner mt-12 py-16 px-24">
-      <div className=" flex justify-between">
+    <div className="examBanner my-12 py-16 relative ">
+      <div className=" absolute top-0 left-0">
+        <div>
+          <Image src="/images/pics/banner-background.png" width={550} height={275} alt="بنر" />
+        </div>
+
+      </div>
+      <div className=" relative container mx-auto flex justify-between">
+                <div className=" absolute -top-6 left-0">
+          <Image src="/images/pics/exam-pic.svg" width={260} height={205} alt="بنر" />
+        </div>
         <div className="w-2/3">
           <div className="flex gap-2">
             <div>
@@ -24,7 +33,7 @@ function ExamsBanner() {
               بهبود روابط شخصی و حرفه‌ای و همچنین رشد فردی مؤثر باشد.
             </p>
           </div>
-          <div className="flex gap-2 border border-white w-40 text-white rounded-sm py-2 justify-center mt-10">
+          <div className="flex gap-2 border border-white w-40 text-white rounded-sm py-2 justify-center mt-5">
               <p>مشاهده آزمون ها</p>
               <Image
                 src="/images/icons/white-diagonal.svg"
