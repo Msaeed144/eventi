@@ -41,14 +41,9 @@ body {
         max-width: 1024px;
     }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1240px) {
     .container {
-        max-width: 1280px;
-    }
-}
-@media (min-width: 1536px) {
-    .container {
-        max-width: 1536px;
+        max-width: 1240px;
     }
 }
 .landing-poster-slider .swiper {
@@ -156,16 +151,15 @@ cursor: pointer;
   align-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.special-slider .swiper-button-next {
-  left: 15px;
-  bottom: 50%;
-  z-index: 50;
-}
 .special-slider .swiper-button-prev {
-  right: 15px;
-  bottom: 50%;
+  right: 20px;
+  bottom: 65% !important;
+  z-index: 40;
+}
+.special-slider .swiper-button-next {
+  left:20px;
+  bottom: 65% !important;
   z-index: 50;
-
 }
 .special-slider .swiper {
   position: unset !important;
@@ -191,20 +185,15 @@ cursor: pointer;
 
 @media (min-width: 1536px) {
 .course-category .swiper-button-next {
-  left: 240px !important;
+  left: 140px !important;
   top: 1500px !important;
 }
 .course-category .swiper-button-prev {
   right: 175px !important; 
     top: 1500px !important;
 }
-.special-slider .swiper-button-next {
-  left: 70px;
-  bottom:200px ;
-}
-.special-slider .swiper-button-prev {
-  bottom:200px ;
-}
+
+
 }
 .MuiRating-decimal , .MuiRating-decimal span {
   display: flex;
@@ -339,4 +328,51 @@ cursor: pointer;
   border-radius: 12px !important;
   box-shadow: none !important;
   border: 1px solid #ddd;
+}
+.boxShadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.swiper-button-prev {
+background-image: url(/images/icons/prev-icon.svg) !important;
+background-repeat: no-repeat;
+background-size: 60% auto;
+background-position: center;
+}
+.swiper-button-next {
+background-image: url(/images/icons/next-icon.svg) !important;
+background-repeat: no-repeat;
+background-size: 60% auto;
+background-position: center;
+}
+.special-slider .swiper-button-prev svg ,.special-slider .swiper-button-next svg{
+  display: none !important;
+}
+.swiper-button-prev::after {
+display: none !important;
+}
+.swiper-button-next::after {
+display: none !important;
+}
+.MuiPagination-root{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px !important;
+}
+.paginationCourse .MuiButtonBase-root svg {
+  color: #1565C0 !important;
+}
+.paginationNumber .MuiPaginationItem-page {
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  font-weight:normal !important;
+  background-color: white ;
+  border: 1px solid #E3F2FD;
+  color: #1565C0 !important;
+}
+.paginationNumber .Mui-selected  {
+  color: white !important;
+}
+.paginationNumber ul {
+  display: flex !important;
+  flex-direction: row-reverse !important;
 }

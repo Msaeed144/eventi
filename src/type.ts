@@ -1,5 +1,5 @@
 interface CourseDate {
-  year: number;
+  year: string;
   month: string;
   day: number;
   houre: string;

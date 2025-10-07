@@ -7,70 +7,59 @@ type CourseCartProps = { course: Course };
 
 function CourseCart({ course }: CourseCartProps) {
   return (
-    <div>
-      <div className="p-2 h-80 relative">
-        <div className=" relative w-[290px]  bg-white mt-2 z-10 text-white rounded-md">
-          
-          <div className=" absolute bottom-14 w-full ">
-            <div className="bg-boxGrey opacity-50 h-[1px] w-full bottom-0"></div>
+    <div className="text-center flex flex-col items-center relative">
+      <div className="bg-boxGrey w-3xs h-[170px] rounded-md absolute"></div>
+      <div className="z-40 absolute top-[154px] w-full">
+        <div className="flex justify-around w-full">
+          <div className="w-[95px] h-[28px] rounded-[5px] bg-primaryColor flex font-light items-center justify-center text-white">
+            <p className="text-[12px]">{courseTypeDetector(course.status)}</p>
+          </div>
+          <div className="bg-white p-1 rounded-[5px] boxShadow">
+            <Image
+              src="/images/icons/heart-border.svg"
+              width={20}
+              height={20}
+              alt="لایک نشده"
+            />
           </div>
         </div>
-        <div className="top-0 absolute right-[27px] z-30">
-          <div className=" relative w-[249px] h-[170px] p-4 mx-auto bg-boxGrey rounded-md">
-            <div className=" absolute -bottom-3">
-              <div className="flex items-center gap-20">
-                <div>
-                  <div
-                    className="px-2 rounded-[5px] w-28 text-center"
-                    style={{
-                      backgroundColor: `${courseTypeColor(course.status)}`,
-                    }}
-                  >
-                    <p className="text-white">
-                      {courseTypeDetector(course.status)}
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="bg-white p-1 rounded-sm"
-                  style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
-                >
-                  <Image
-                    className="mt-1"
-                    src="/images/icons/heart-border.svg"
-                    width={24}
-                    height={24}
-                    alt="ورود"
-                  />
-                </div>
-              </div>
+      </div>
+      <div className="w-[291px]  bg-white rounded-md py-5 mt-[45px] ">
+        <div className="px-4">
+          <div className=" leading-6 text-black mt-32 text-right font-semibold text-[14px]">
+            {course.title}
+          </div>
+          <div className="flex justify-between my-4 items-center">
+            <div className="w-[44px] h-[44px] bg-boxGrey rounded-full"></div>
+            <div>
+              <p className=" text-[12px]">
+                {course.date.day +
+                  " " +
+                  course.date.month +
+                  " " +
+                  course.date.year +
+                  " - ساعت " +
+                  course.date.houre}
+              </p>
             </div>
+          </div>
+        </div>
+        <div className="h-[1px] mt-2 w-full bg-boxGrey"></div>
+        <div className="px-4 flex justify-between items-center mt-5">
+          <div className="w-[115px] h-9 border border-primaryColor rounded-sm flex justify-center items-center gap-2 font-semibold text-primaryColor">
+            <p className="text-[12px]">اطلاعات دوره</p>
+            <Image
+              src="/images/icons/blue-diagonal.svg"
+              width={18}
+              height={18}
+              alt="لینک"
+            />
           </div>
           <div>
-            <div className="w-60 mt-6 font-semibold text-[14px] leading-6">
-              <h4>{course.title}</h4>
-              <div className="flex justify-between items-center h-16">
-                <div className="w-10 h-10 my-4 bg-boxGrey rounded-full"></div>
-                <div className="font-light text-[12px]">
-                  {course.date.day}
-                  {course.date.month}
-                  {course.date.year} - ساعت
-                  {course.date.houre}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex justify-between items-center mb-20 text-primaryColor font-semibold">
-            <div className="flex gap-1 w-[115px] h-9 items-center justify-center border mt-2 rounded-sm  border-primaryColor cursor-pointer text-[12px]">
-              <p>اطلاعات دوره</p>
-                <Image
-                  src="/images/icons/blue-diagonal.svg"
-                  width={20}
-                  height={20}
-                  alt="ورود"
-                />
-            </div>
-            <p className="mt-2">{course.price}{course.price =="رایگان" &&" !"}</p>
+            <p className="text-primaryColor font-semibold">
+              {course.price}
+              {course.price == "رایگان" && " !"}
+            </p>
           </div>
         </div>
       </div>

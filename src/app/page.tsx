@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="bg-secondaryColor">
       <div className="xl:mr-8 ">
-        <div className="mt-5 flex xl:gap-6  gap-1 justify-between container mx-auto">
+        <div className="mt-5 flex container mx-auto gap-6">
           <MainSlider />
           <MiniPoster />
         </div>
