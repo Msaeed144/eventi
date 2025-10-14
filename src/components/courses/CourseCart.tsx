@@ -1,6 +1,5 @@
 import React from "react";
 import type { Course } from "@/type";
-import { courseTypeDetector } from "@/tools/functions";
 import Image from "next/image";
 import Link from "next/link";
 

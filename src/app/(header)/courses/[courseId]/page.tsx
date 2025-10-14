@@ -6,7 +6,7 @@ import Image from "next/image";
 import CourseDetails from "@/components/courses/CourseDetails";
 
 type PageProps = {
-  params: { courseId: string };
+  params: { courseId: string }; // params باید به‌طور مستقیم داده شود
 };
 
 function getCourse(courseId: string) {
@@ -42,13 +42,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: course.Organizer.description,
       images: course.image ? [course.image] : ["/images/og-default.png"],
     },
-    // اگر لازم داری id به‌صورت meta tag هم باشد:
-    // other: { "course:id": String(course.id) },
   };
 }
 
 // ✅ خود صفحه (توجه: params دیگر Promise نیست)
-export default async function CourseDetail({ params }: PageProps) {
+export default function CourseDetail({ params }: PageProps) {
   const course = getCourse(params.courseId);
 
   if (!course) {
