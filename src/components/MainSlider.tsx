@@ -15,7 +15,7 @@ function MainSlider() {
     {image:"/images/pics/Banner.png" ,id:"4"},
   ]
   return (
-    <div className=" landing-poster-slider w-[500px] xl:w-[73%] lg:w-[73.5%] mr-8">
+    <div className=" landing-poster-slider w-[895px] mr-8">
       <Swiper
         dir="ltr"
         effect={"cards"}
@@ -31,7 +31,7 @@ function MainSlider() {
       >
         {images.map(image => (
           <SwiperSlide key={image.id}>
-            <Image src={image.image} width={1350} height={800} alt={image.id} />
+            <Image src={image.image} width={895} height={400} alt={image.id} />
           </SwiperSlide>
         ))}
       </Swiper>

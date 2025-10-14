@@ -1,5 +1,5 @@
 interface CourseDate {
-  year: number;
+  year: string;
   month: string;
   day: number;
   houre: string;
@@ -32,7 +32,8 @@ export interface Course {
   title: string;
   date: CourseDate;
   Organizer: Organizer;
-  image?: string; 
+  link:string;
+  image: string; 
   special: boolean; 
   status:  string;
   type: string;

@@ -16,7 +16,7 @@ function Courses() {
           </h3>
           <div className=" bg-tertiaryColor h-[10px] w-36 rounded-sm absolute bottom-1 -z-10"></div> 
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 ml-36">
           <div onClick={()=>setType("course")} className={` py-1 w-[100px] text-center border rounded-sm border-boxGrey cursor-pointer ${type=="course" ? "bg-primaryColor text-white" : "bg-white text-black"} hover:bg-primaryColor hover:text-white transition-all duration-300`}>دوره</div>
           <div onClick={()=>setType("workshop")} className={` py-1 w-[100px] text-center border rounded-sm border-boxGrey cursor-pointer ${type=="workshop" ? "bg-primaryColor text-white" : "bg-white text-black"}  hover:bg-primaryColor hover:text-white transition-all duration-300`}>کارگاه</div>
           <div onClick={()=>setType("seminar")} className={` py-1 w-[100px] text-center border rounded-sm border-boxGrey cursor-pointer  ${type=="seminar" ? "bg-primaryColor text-white" : "bg-white text-black"}  hover:bg-primaryColor hover:text-white transition-all duration-300`}>سمینار</div>

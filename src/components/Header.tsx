@@ -10,9 +10,17 @@ function Header() {
     <div>
       <div className="container mx-auto relative">
         <div className="mt-6 w-full ">
-          <div className="bg-white rounded-md h-24 flex justify-between pl-6">
-            <div className="flex pr-10 justify-between w-1/2">
-              <Image src="/images/logo.svg" width={109} height={40} alt="لوگو" />
+          <div className="bg-white mx-auto rounded-md w-[1240px] h-24 flex justify-between pl-6">
+            <div className="flex items-center pr-10 justify-between w-1/2">
+              <Link href="/">
+                <Image
+                  src="/images/logo.svg"
+                  width={109}
+                  height={40}
+                  alt="لوگو"
+                />
+              </Link>
+
               <div className=" relative my-auto">
                 <input
                   className="mr-4 text-[#9D9D9D] text-sm w-96 border-strokeColor border rounded-lg pr-4 h-12"
@@ -51,18 +59,18 @@ function Header() {
               </div>
             </div>
           </div>
-          <div className="bg-tertiaryColor flex justify-between px-8 py-3 w-[95%] rounded-b-md mx-auto">
+          <div className="bg-tertiaryColor mx-auto flex justify-between px-8 py-3 w-[1180px] rounded-b-md">
             <ul className="flex justify-around font-medium text-base gap-0 z-40">
-             <Link href="/courses">
-              <li className=" cursor-pointer border-l border-l-primaryColor pl-8">
-                همه ی رویداد ها
-              </li>
+              <Link href="/courses">
+                <li className=" cursor-pointer border-l border-l-primaryColor pl-6 ml-6">
+                  همه ی رویداد ها
+                </li>
               </Link>
-              <li className=" cursor-pointer px-8">کسب و کار</li>
-              <li className=" cursor-pointer pl-8">آموزشی</li>
-              <li className=" cursor-pointer pl-8">علوم انسانی</li>
-              <li className=" cursor-pointer pl-8">مدیریت</li>
-              <li className=" cursor-pointer pl-8">رسانه</li>
+              <li className=" cursor-pointer pl-11">کسب و کار</li>
+              <li className=" cursor-pointer pl-11">آموزشی</li>
+              <li className=" cursor-pointer pl-11">علوم انسانی</li>
+              <li className=" cursor-pointer pl-11">مدیریت</li>
+              <li className=" cursor-pointer pl-11">رسانه</li>
 
               {/* آیتم سایر */}
               <li
