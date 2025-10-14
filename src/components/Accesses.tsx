@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 function Accesses() {
   return (
-    <div className="mt-16 mb-6 py-4 bg-white pt-7">
+    <div className="mt-24 mb-6 py-4 bg-white pt-7">
       <div className=" container mx-auto">
         <div className="bg-[#f3f1f1] text-center py-2 rounded-[90px] font-semibold w-[150px]">
           <p>دسترسی سریع</p>
@@ -17,7 +17,7 @@ function Accesses() {
           </ul>
         </div>
         <div className="my-6 pb-8 border-b-2 border-boxGrey">
-          <ul className="flex flex-wrap list-disc gap-9 pl-36 text-textColor">
+          <ul className="flex flex-wrap list-disc gap-9 pl-12 text-textColor">
             <li>توسعه فردی و خانواده</li>
             <li>آموزشی</li>
             <li>تشکیلاتی</li>
@@ -52,7 +52,7 @@ function Accesses() {
                 height={44}
                 alt="لوگو"
               />
-              <p className="mt-2 font-semibold text-sm">
+              <p className="mt-2 font-medium text-xs">
                 ارتباط با پشتیبانی: ۰۲۱۸۸۳۹۰۵۱۵
               </p>
             </div>

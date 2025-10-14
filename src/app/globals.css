@@ -178,7 +178,6 @@ cursor: pointer;
   
 }
 .examBanner {
-  background: #BBDEFB;
   background: linear-gradient(90deg, rgba(187, 222, 251, 1) 0%, rgba(21, 101, 192, 1) 100%);
   height: 276px;
 }
@@ -375,4 +374,26 @@ display: none !important;
 .paginationNumber ul {
   display: flex !important;
   flex-direction: row-reverse !important;
+}
+.registerPicBox {
+background: #1565C0;
+background: linear-gradient(90deg, rgba(21, 101, 192, 1) 0%, rgba(187, 222, 251, 1) 100%);
+}
+.customSelect {
+  appearance: none; /* حذف فلش پیش‌فرض */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('/images/icons/arrow-down.svg') no-repeat left 10px center; /* مسیر آیکون */
+  background-size: 12px;
+  padding-left: 30px; /* فاصله از آیکون */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.courseBanner {
+  background: linear-gradient(90deg, rgba(187, 222, 251, 1) 0%, rgba(21, 101, 192, 1) 100%);
+  height: 280px;
+}
+.statusRate svg {
+  width: 16px !important;
+  height: 16px;
 }

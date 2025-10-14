@@ -1,3 +1,5 @@
+import { text } from "stream/consumers"
+
 export const courses = [
     {
         id:1001,
@@ -13,6 +15,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"ongoing",
@@ -23,7 +26,7 @@ export const courses = [
         time:20,
         holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
         address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
+        location:"https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2289.44003468835!2d51.4006222278965!3d35.75677338176038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDQ1JzIxLjQiTiA1McKwMjQnMDQuMCJF!5e0!3m2!1sen!2s!4v1760254787421!5m2!1sen!2s",
         descriptions:{
             first:{
                 title:"معرفی دوره پروژه‌های لاراولی",
@@ -48,12 +51,12 @@ export const courses = [
                 teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
             },
             {
-                title:"حکمرانی مردمی",
+                title:"مدیریت فرهنگی",
                 teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
             },
             {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
+                title:"مدیریت فرهنگی",
+                teacher:"دکتر رضا طلائی نیک، معاون توسعه مدیریت و برنامه‌ریزی راهبردی"
             },
         ]
     },
@@ -71,6 +74,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"",
+        image:"/images/pics/course1.png",
         special:false,
         status:"completed",
         type:"workshop",
@@ -78,7 +83,7 @@ export const courses = [
         price:"2000000",
         categories:["نرم افزار" , "تکنولوژی"],
         time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
+        holdingMethod:["حضوری"],
         address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
         location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
         descriptions:{
@@ -128,7 +133,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
-        image:"/images/pics/course1.png",
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course2.png",
         special:true,
         status:"completed",
         type:"seminar",
@@ -136,7 +142,7 @@ export const courses = [
         price:"رایگان",
         categories:["نرم افزار" , "تکنولوژی"],
         time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
+        holdingMethod:[ "آنلاین"],
         address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
         location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
         descriptions:{
@@ -186,6 +192,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"completed",
         type:"call",
@@ -243,6 +251,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"ongoing",
@@ -301,6 +310,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"ongoing",
         type:"course",
@@ -358,6 +369,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"register",
@@ -416,6 +428,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"completed",
         type:"seminar",
@@ -473,6 +487,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"register",
@@ -531,6 +546,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"ongoing",
         type:"offline",
@@ -588,6 +605,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"register",
@@ -646,6 +664,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"completed",
         type:"workshop",
@@ -703,6 +723,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"register",
@@ -761,6 +782,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"register",
         type:"call",
@@ -818,6 +841,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"ongoing",
@@ -876,6 +900,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"completed",
         type:"workshop",
@@ -933,6 +959,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"completed",
@@ -991,6 +1018,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"completed",
         type:"call",
@@ -1048,6 +1077,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"ongoing",
@@ -1106,6 +1136,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"ongoing",
         type:"course",
@@ -1163,6 +1195,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"register",
@@ -1221,6 +1254,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"completed",
         type:"seminar",
@@ -1278,6 +1313,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"register",
@@ -1336,6 +1372,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"ongoing",
         type:"offline",
@@ -1393,6 +1431,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"register",
@@ -1451,6 +1490,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"completed",
         type:"workshop",
@@ -1508,6 +1549,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"register",
@@ -1566,6 +1608,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"register",
         type:"call",
@@ -1623,6 +1667,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"ongoing",
@@ -1681,6 +1726,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"completed",
         type:"workshop",
@@ -1738,6 +1785,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"completed",
@@ -1796,6 +1844,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"completed",
         type:"call",
@@ -1853,6 +1903,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"ongoing",
@@ -1911,6 +1962,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"ongoing",
         type:"course",
@@ -1968,6 +2021,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"register",
@@ -2026,6 +2080,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"completed",
         type:"seminar",
@@ -2083,6 +2139,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"register",
@@ -2141,6 +2198,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"ongoing",
         type:"offline",
@@ -2198,6 +2257,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"register",
@@ -2256,6 +2316,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"completed",
         type:"workshop",
@@ -2313,6 +2375,7 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
         image:"/images/pics/course1.png",
         special:true,
         status:"register",
@@ -2371,6 +2434,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"register",
         type:"call",
@@ -2428,6 +2493,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"register",
         type:"call",
@@ -2485,6 +2552,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"register",
         type:"call",
@@ -2542,6 +2611,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"register",
         type:"call",
@@ -2599,6 +2670,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"register",
         type:"call",
@@ -2656,6 +2729,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"register",
         type:"call",
@@ -2713,6 +2788,8 @@ export const courses = [
             rate:4.5,
             description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
         },
+        link:"https://www.tarjomangd.ir/",
+        image:"/images/pics/course1.png",
         special:false,
         status:"register",
         type:"call",
@@ -2722,634 +2799,7 @@ export const courses = [
         time:20,
         holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
         address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
-        descriptions:{
-            first:{
-                title:"معرفی دوره پروژه‌های لاراولی",
-                text:"اگر می‌خواهید Laravel را به‌صورت عملی و پروژه‌محور یاد بگیرید، این دوره برای شماست! در این دوره، به جای آموزش‌های تئوری، ۱۰ پروژه کاربردی را از صفر تا صد پیاده‌سازی می‌کنیم تا بتوانید در دنیای واقعی از مهارت‌های لاراولی خود استفاده کنید."
-            },
-            seccond:{
-                title:"چه چیزهایی یاد می‌گیرید؟",
-                items:[
-                    "ساخت سیستم احراز هویت چندگانه (ایمیل، موبایل، رمز، OTP)",
-                    "پیاده‌سازی سیستم مدیریت اعلان‌ها (ایمیل، SMS، تلگرام، پوش نوتیفیکیشن)",
-                    "طراحی و توسعه API برای اپلیکیشن‌های موبایل با احراز هویت امن",
-                    "مدیریت فایل و فضای ذخیره‌سازی (آپلود، فشرده‌سازی، S3)",
-                    "پیاده‌سازی چت زنده و پیام‌رسان با Laravel Reverb",
-                    "اتصال درگاه پرداخت و کیف پول دیجیتال برای مدیریت تراکنش‌ها",
-                    "ایجاد سیستم مدیریت محتوا (CMS)‌ و ویرایشگر حرفه‌ای",
-                ]
-            }
-        },
-        courseTitles:[
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-        ]
-    },
-    {
-        id:1049,
-        title:"آموزش برنامه‌ نویسی برای استفاده از هوش مصنوعی و کاربردهای روزمره آن",
-        date:{
-            year:"04",
-            month:"مهر",
-            day:2,
-            houre:"14:00"
-        },
-        Organizer:{
-            name:"محمدرضا فقیهی",
-            rate:4.5,
-            description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
-        },
-        special:false,
-        status:"register",
-        type:"call",
-        like:false,
-        price:"2000000",
-        categories:["نرم افزار" , "تکنولوژی"],
-        time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
-        address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
-        descriptions:{
-            first:{
-                title:"معرفی دوره پروژه‌های لاراولی",
-                text:"اگر می‌خواهید Laravel را به‌صورت عملی و پروژه‌محور یاد بگیرید، این دوره برای شماست! در این دوره، به جای آموزش‌های تئوری، ۱۰ پروژه کاربردی را از صفر تا صد پیاده‌سازی می‌کنیم تا بتوانید در دنیای واقعی از مهارت‌های لاراولی خود استفاده کنید."
-            },
-            seccond:{
-                title:"چه چیزهایی یاد می‌گیرید؟",
-                items:[
-                    "ساخت سیستم احراز هویت چندگانه (ایمیل، موبایل، رمز، OTP)",
-                    "پیاده‌سازی سیستم مدیریت اعلان‌ها (ایمیل، SMS، تلگرام، پوش نوتیفیکیشن)",
-                    "طراحی و توسعه API برای اپلیکیشن‌های موبایل با احراز هویت امن",
-                    "مدیریت فایل و فضای ذخیره‌سازی (آپلود، فشرده‌سازی، S3)",
-                    "پیاده‌سازی چت زنده و پیام‌رسان با Laravel Reverb",
-                    "اتصال درگاه پرداخت و کیف پول دیجیتال برای مدیریت تراکنش‌ها",
-                    "ایجاد سیستم مدیریت محتوا (CMS)‌ و ویرایشگر حرفه‌ای",
-                ]
-            }
-        },
-        courseTitles:[
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-        ]
-    },
-    {
-        id:1050,
-        title:"آموزش برنامه‌ نویسی برای استفاده از هوش مصنوعی و کاربردهای روزمره آن",
-        date:{
-            year:"04",
-            month:"مهر",
-            day:2,
-            houre:"14:00"
-        },
-        Organizer:{
-            name:"محمدرضا فقیهی",
-            rate:4.5,
-            description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
-        },
-        special:false,
-        status:"register",
-        type:"call",
-        like:false,
-        price:"2000000",
-        categories:["نرم افزار" , "تکنولوژی"],
-        time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
-        address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
-        descriptions:{
-            first:{
-                title:"معرفی دوره پروژه‌های لاراولی",
-                text:"اگر می‌خواهید Laravel را به‌صورت عملی و پروژه‌محور یاد بگیرید، این دوره برای شماست! در این دوره، به جای آموزش‌های تئوری، ۱۰ پروژه کاربردی را از صفر تا صد پیاده‌سازی می‌کنیم تا بتوانید در دنیای واقعی از مهارت‌های لاراولی خود استفاده کنید."
-            },
-            seccond:{
-                title:"چه چیزهایی یاد می‌گیرید؟",
-                items:[
-                    "ساخت سیستم احراز هویت چندگانه (ایمیل، موبایل، رمز، OTP)",
-                    "پیاده‌سازی سیستم مدیریت اعلان‌ها (ایمیل، SMS، تلگرام، پوش نوتیفیکیشن)",
-                    "طراحی و توسعه API برای اپلیکیشن‌های موبایل با احراز هویت امن",
-                    "مدیریت فایل و فضای ذخیره‌سازی (آپلود، فشرده‌سازی، S3)",
-                    "پیاده‌سازی چت زنده و پیام‌رسان با Laravel Reverb",
-                    "اتصال درگاه پرداخت و کیف پول دیجیتال برای مدیریت تراکنش‌ها",
-                    "ایجاد سیستم مدیریت محتوا (CMS)‌ و ویرایشگر حرفه‌ای",
-                ]
-            }
-        },
-        courseTitles:[
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-        ]
-    },
-    {
-        id:1051,
-        title:"آموزش برنامه‌ نویسی برای استفاده از هوش مصنوعی و کاربردهای روزمره آن",
-        date:{
-            year:"04",
-            month:"مهر",
-            day:2,
-            houre:"14:00"
-        },
-        Organizer:{
-            name:"محمدرضا فقیهی",
-            rate:4.5,
-            description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
-        },
-        special:false,
-        status:"register",
-        type:"call",
-        like:false,
-        price:"2000000",
-        categories:["نرم افزار" , "تکنولوژی"],
-        time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
-        address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
-        descriptions:{
-            first:{
-                title:"معرفی دوره پروژه‌های لاراولی",
-                text:"اگر می‌خواهید Laravel را به‌صورت عملی و پروژه‌محور یاد بگیرید، این دوره برای شماست! در این دوره، به جای آموزش‌های تئوری، ۱۰ پروژه کاربردی را از صفر تا صد پیاده‌سازی می‌کنیم تا بتوانید در دنیای واقعی از مهارت‌های لاراولی خود استفاده کنید."
-            },
-            seccond:{
-                title:"چه چیزهایی یاد می‌گیرید؟",
-                items:[
-                    "ساخت سیستم احراز هویت چندگانه (ایمیل، موبایل، رمز، OTP)",
-                    "پیاده‌سازی سیستم مدیریت اعلان‌ها (ایمیل، SMS، تلگرام، پوش نوتیفیکیشن)",
-                    "طراحی و توسعه API برای اپلیکیشن‌های موبایل با احراز هویت امن",
-                    "مدیریت فایل و فضای ذخیره‌سازی (آپلود، فشرده‌سازی، S3)",
-                    "پیاده‌سازی چت زنده و پیام‌رسان با Laravel Reverb",
-                    "اتصال درگاه پرداخت و کیف پول دیجیتال برای مدیریت تراکنش‌ها",
-                    "ایجاد سیستم مدیریت محتوا (CMS)‌ و ویرایشگر حرفه‌ای",
-                ]
-            }
-        },
-        courseTitles:[
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-        ]
-    },
-    {
-        id:1052,
-        title:"آموزش برنامه‌ نویسی برای استفاده از هوش مصنوعی و کاربردهای روزمره آن",
-        date:{
-            year:"04",
-            month:"مهر",
-            day:2,
-            houre:"14:00"
-        },
-        Organizer:{
-            name:"محمدرضا فقیهی",
-            rate:4.5,
-            description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
-        },
-        special:false,
-        status:"register",
-        type:"call",
-        like:false,
-        price:"2000000",
-        categories:["نرم افزار" , "تکنولوژی"],
-        time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
-        address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
-        descriptions:{
-            first:{
-                title:"معرفی دوره پروژه‌های لاراولی",
-                text:"اگر می‌خواهید Laravel را به‌صورت عملی و پروژه‌محور یاد بگیرید، این دوره برای شماست! در این دوره، به جای آموزش‌های تئوری، ۱۰ پروژه کاربردی را از صفر تا صد پیاده‌سازی می‌کنیم تا بتوانید در دنیای واقعی از مهارت‌های لاراولی خود استفاده کنید."
-            },
-            seccond:{
-                title:"چه چیزهایی یاد می‌گیرید؟",
-                items:[
-                    "ساخت سیستم احراز هویت چندگانه (ایمیل، موبایل، رمز، OTP)",
-                    "پیاده‌سازی سیستم مدیریت اعلان‌ها (ایمیل، SMS، تلگرام، پوش نوتیفیکیشن)",
-                    "طراحی و توسعه API برای اپلیکیشن‌های موبایل با احراز هویت امن",
-                    "مدیریت فایل و فضای ذخیره‌سازی (آپلود، فشرده‌سازی، S3)",
-                    "پیاده‌سازی چت زنده و پیام‌رسان با Laravel Reverb",
-                    "اتصال درگاه پرداخت و کیف پول دیجیتال برای مدیریت تراکنش‌ها",
-                    "ایجاد سیستم مدیریت محتوا (CMS)‌ و ویرایشگر حرفه‌ای",
-                ]
-            }
-        },
-        courseTitles:[
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-        ]
-    },
-    {
-        id:1053,
-        title:"آموزش برنامه‌ نویسی برای استفاده از هوش مصنوعی و کاربردهای روزمره آن",
-        date:{
-            year:"04",
-            month:"مهر",
-            day:2,
-            houre:"14:00"
-        },
-        Organizer:{
-            name:"محمدرضا فقیهی",
-            rate:4.5,
-            description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
-        },
-        special:false,
-        status:"register",
-        type:"call",
-        like:false,
-        price:"2000000",
-        categories:["نرم افزار" , "تکنولوژی"],
-        time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
-        address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
-        descriptions:{
-            first:{
-                title:"معرفی دوره پروژه‌های لاراولی",
-                text:"اگر می‌خواهید Laravel را به‌صورت عملی و پروژه‌محور یاد بگیرید، این دوره برای شماست! در این دوره، به جای آموزش‌های تئوری، ۱۰ پروژه کاربردی را از صفر تا صد پیاده‌سازی می‌کنیم تا بتوانید در دنیای واقعی از مهارت‌های لاراولی خود استفاده کنید."
-            },
-            seccond:{
-                title:"چه چیزهایی یاد می‌گیرید؟",
-                items:[
-                    "ساخت سیستم احراز هویت چندگانه (ایمیل، موبایل، رمز، OTP)",
-                    "پیاده‌سازی سیستم مدیریت اعلان‌ها (ایمیل، SMS، تلگرام، پوش نوتیفیکیشن)",
-                    "طراحی و توسعه API برای اپلیکیشن‌های موبایل با احراز هویت امن",
-                    "مدیریت فایل و فضای ذخیره‌سازی (آپلود، فشرده‌سازی، S3)",
-                    "پیاده‌سازی چت زنده و پیام‌رسان با Laravel Reverb",
-                    "اتصال درگاه پرداخت و کیف پول دیجیتال برای مدیریت تراکنش‌ها",
-                    "ایجاد سیستم مدیریت محتوا (CMS)‌ و ویرایشگر حرفه‌ای",
-                ]
-            }
-        },
-        courseTitles:[
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-        ]
-    },
-    {
-        id:1054,
-        title:"آموزش برنامه‌ نویسی برای استفاده از هوش مصنوعی و کاربردهای روزمره آن",
-        date:{
-            year:"04",
-            month:"مهر",
-            day:2,
-            houre:"14:00"
-        },
-        Organizer:{
-            name:"محمدرضا فقیهی",
-            rate:4.5,
-            description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
-        },
-        special:false,
-        status:"register",
-        type:"call",
-        like:false,
-        price:"2000000",
-        categories:["نرم افزار" , "تکنولوژی"],
-        time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
-        address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
-        descriptions:{
-            first:{
-                title:"معرفی دوره پروژه‌های لاراولی",
-                text:"اگر می‌خواهید Laravel را به‌صورت عملی و پروژه‌محور یاد بگیرید، این دوره برای شماست! در این دوره، به جای آموزش‌های تئوری، ۱۰ پروژه کاربردی را از صفر تا صد پیاده‌سازی می‌کنیم تا بتوانید در دنیای واقعی از مهارت‌های لاراولی خود استفاده کنید."
-            },
-            seccond:{
-                title:"چه چیزهایی یاد می‌گیرید؟",
-                items:[
-                    "ساخت سیستم احراز هویت چندگانه (ایمیل، موبایل، رمز، OTP)",
-                    "پیاده‌سازی سیستم مدیریت اعلان‌ها (ایمیل، SMS، تلگرام، پوش نوتیفیکیشن)",
-                    "طراحی و توسعه API برای اپلیکیشن‌های موبایل با احراز هویت امن",
-                    "مدیریت فایل و فضای ذخیره‌سازی (آپلود، فشرده‌سازی، S3)",
-                    "پیاده‌سازی چت زنده و پیام‌رسان با Laravel Reverb",
-                    "اتصال درگاه پرداخت و کیف پول دیجیتال برای مدیریت تراکنش‌ها",
-                    "ایجاد سیستم مدیریت محتوا (CMS)‌ و ویرایشگر حرفه‌ای",
-                ]
-            }
-        },
-        courseTitles:[
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-        ]
-    },
-    {
-        id:1055,
-        title:"آموزش برنامه‌ نویسی برای استفاده از هوش مصنوعی و کاربردهای روزمره آن",
-        date:{
-            year:"04",
-            month:"مهر",
-            day:2,
-            houre:"14:00"
-        },
-        Organizer:{
-            name:"محمدرضا فقیهی",
-            rate:4.5,
-            description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
-        },
-        special:false,
-        status:"register",
-        type:"call",
-        like:false,
-        price:"2000000",
-        categories:["نرم افزار" , "تکنولوژی"],
-        time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
-        address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
-        descriptions:{
-            first:{
-                title:"معرفی دوره پروژه‌های لاراولی",
-                text:"اگر می‌خواهید Laravel را به‌صورت عملی و پروژه‌محور یاد بگیرید، این دوره برای شماست! در این دوره، به جای آموزش‌های تئوری، ۱۰ پروژه کاربردی را از صفر تا صد پیاده‌سازی می‌کنیم تا بتوانید در دنیای واقعی از مهارت‌های لاراولی خود استفاده کنید."
-            },
-            seccond:{
-                title:"چه چیزهایی یاد می‌گیرید؟",
-                items:[
-                    "ساخت سیستم احراز هویت چندگانه (ایمیل، موبایل، رمز، OTP)",
-                    "پیاده‌سازی سیستم مدیریت اعلان‌ها (ایمیل، SMS، تلگرام، پوش نوتیفیکیشن)",
-                    "طراحی و توسعه API برای اپلیکیشن‌های موبایل با احراز هویت امن",
-                    "مدیریت فایل و فضای ذخیره‌سازی (آپلود، فشرده‌سازی، S3)",
-                    "پیاده‌سازی چت زنده و پیام‌رسان با Laravel Reverb",
-                    "اتصال درگاه پرداخت و کیف پول دیجیتال برای مدیریت تراکنش‌ها",
-                    "ایجاد سیستم مدیریت محتوا (CMS)‌ و ویرایشگر حرفه‌ای",
-                ]
-            }
-        },
-        courseTitles:[
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-        ]
-    },
-    {
-        id:1056,
-        title:"آموزش برنامه‌ نویسی برای استفاده از هوش مصنوعی و کاربردهای روزمره آن",
-        date:{
-            year:"04",
-            month:"مهر",
-            day:2,
-            houre:"14:00"
-        },
-        Organizer:{
-            name:"محمدرضا فقیهی",
-            rate:4.5,
-            description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
-        },
-        special:false,
-        status:"register",
-        type:"call",
-        like:false,
-        price:"2000000",
-        categories:["نرم افزار" , "تکنولوژی"],
-        time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
-        address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
-        descriptions:{
-            first:{
-                title:"معرفی دوره پروژه‌های لاراولی",
-                text:"اگر می‌خواهید Laravel را به‌صورت عملی و پروژه‌محور یاد بگیرید، این دوره برای شماست! در این دوره، به جای آموزش‌های تئوری، ۱۰ پروژه کاربردی را از صفر تا صد پیاده‌سازی می‌کنیم تا بتوانید در دنیای واقعی از مهارت‌های لاراولی خود استفاده کنید."
-            },
-            seccond:{
-                title:"چه چیزهایی یاد می‌گیرید؟",
-                items:[
-                    "ساخت سیستم احراز هویت چندگانه (ایمیل، موبایل، رمز، OTP)",
-                    "پیاده‌سازی سیستم مدیریت اعلان‌ها (ایمیل، SMS، تلگرام، پوش نوتیفیکیشن)",
-                    "طراحی و توسعه API برای اپلیکیشن‌های موبایل با احراز هویت امن",
-                    "مدیریت فایل و فضای ذخیره‌سازی (آپلود، فشرده‌سازی، S3)",
-                    "پیاده‌سازی چت زنده و پیام‌رسان با Laravel Reverb",
-                    "اتصال درگاه پرداخت و کیف پول دیجیتال برای مدیریت تراکنش‌ها",
-                    "ایجاد سیستم مدیریت محتوا (CMS)‌ و ویرایشگر حرفه‌ای",
-                ]
-            }
-        },
-        courseTitles:[
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-        ]
-    },
-    {
-        id:1057,
-        title:"آموزش برنامه‌ نویسی برای استفاده از هوش مصنوعی و کاربردهای روزمره آن",
-        date:{
-            year:"04",
-            month:"مهر",
-            day:2,
-            houre:"14:00"
-        },
-        Organizer:{
-            name:"محمدرضا فقیهی",
-            rate:4.5,
-            description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
-        },
-        special:false,
-        status:"register",
-        type:"call",
-        like:false,
-        price:"2000000",
-        categories:["نرم افزار" , "تکنولوژی"],
-        time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
-        address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
-        descriptions:{
-            first:{
-                title:"معرفی دوره پروژه‌های لاراولی",
-                text:"اگر می‌خواهید Laravel را به‌صورت عملی و پروژه‌محور یاد بگیرید، این دوره برای شماست! در این دوره، به جای آموزش‌های تئوری، ۱۰ پروژه کاربردی را از صفر تا صد پیاده‌سازی می‌کنیم تا بتوانید در دنیای واقعی از مهارت‌های لاراولی خود استفاده کنید."
-            },
-            seccond:{
-                title:"چه چیزهایی یاد می‌گیرید؟",
-                items:[
-                    "ساخت سیستم احراز هویت چندگانه (ایمیل، موبایل، رمز، OTP)",
-                    "پیاده‌سازی سیستم مدیریت اعلان‌ها (ایمیل، SMS، تلگرام، پوش نوتیفیکیشن)",
-                    "طراحی و توسعه API برای اپلیکیشن‌های موبایل با احراز هویت امن",
-                    "مدیریت فایل و فضای ذخیره‌سازی (آپلود، فشرده‌سازی، S3)",
-                    "پیاده‌سازی چت زنده و پیام‌رسان با Laravel Reverb",
-                    "اتصال درگاه پرداخت و کیف پول دیجیتال برای مدیریت تراکنش‌ها",
-                    "ایجاد سیستم مدیریت محتوا (CMS)‌ و ویرایشگر حرفه‌ای",
-                ]
-            }
-        },
-        courseTitles:[
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-        ]
-    },
-    {
-        id:1058,
-        title:"آموزش برنامه‌ نویسی برای استفاده از هوش مصنوعی و کاربردهای روزمره آن",
-        date:{
-            year:"04",
-            month:"مهر",
-            day:2,
-            houre:"14:00"
-        },
-        Organizer:{
-            name:"محمدرضا فقیهی",
-            rate:4.5,
-            description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
-        },
-        special:false,
-        status:"register",
-        type:"call",
-        like:false,
-        price:"2000000",
-        categories:["نرم افزار" , "تکنولوژی"],
-        time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
-        address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
-        descriptions:{
-            first:{
-                title:"معرفی دوره پروژه‌های لاراولی",
-                text:"اگر می‌خواهید Laravel را به‌صورت عملی و پروژه‌محور یاد بگیرید، این دوره برای شماست! در این دوره، به جای آموزش‌های تئوری، ۱۰ پروژه کاربردی را از صفر تا صد پیاده‌سازی می‌کنیم تا بتوانید در دنیای واقعی از مهارت‌های لاراولی خود استفاده کنید."
-            },
-            seccond:{
-                title:"چه چیزهایی یاد می‌گیرید؟",
-                items:[
-                    "ساخت سیستم احراز هویت چندگانه (ایمیل، موبایل، رمز، OTP)",
-                    "پیاده‌سازی سیستم مدیریت اعلان‌ها (ایمیل، SMS، تلگرام، پوش نوتیفیکیشن)",
-                    "طراحی و توسعه API برای اپلیکیشن‌های موبایل با احراز هویت امن",
-                    "مدیریت فایل و فضای ذخیره‌سازی (آپلود، فشرده‌سازی، S3)",
-                    "پیاده‌سازی چت زنده و پیام‌رسان با Laravel Reverb",
-                    "اتصال درگاه پرداخت و کیف پول دیجیتال برای مدیریت تراکنش‌ها",
-                    "ایجاد سیستم مدیریت محتوا (CMS)‌ و ویرایشگر حرفه‌ای",
-                ]
-            }
-        },
-        courseTitles:[
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-            {
-                title:"حکمرانی مردمی",
-                teacher:"حجت‌الاسلام علی ذوعلم، رئیس اندیشگاه بیانیه گام دوم"
-            },
-        ]
-    },
-    {
-        id:1059,
-        title:"آموزش برنامه‌ نویسی برای استفاده از هوش مصنوعی و کاربردهای روزمره آن",
-        date:{
-            year:"04",
-            month:"مهر",
-            day:2,
-            houre:"14:00"
-        },
-        Organizer:{
-            name:"محمدرضا فقیهی",
-            rate:4.5,
-            description:"نویسنده و کارگردان خلاق، کانسپتچوال دیجیتال آرتیست، پادکستر، مربی خلاقیت"
-        },
-        special:false,
-        status:"register",
-        type:"call",
-        like:false,
-        price:"2000000",
-        categories:["نرم افزار" , "تکنولوژی"],
-        time:20,
-        holdingMethod:["حضوری" , "آنلاین" , "آنلاین و حضوری" ],
-        address:"تهران، ضلع شمال شرقی ميدان شيخ بهائی، ابتدای خيابان سئول، خیابان خدامی، مدیریت اکتشاف شرکت ملی نفت ایران",
-        location:"https://maps.app.goo.gl/nxADmFWmnmeLekev5",
+        location:"https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2289.44003468835!2d51.4006222278965!3d35.75677338176038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDQ1JzIxLjQiTiA1McKwMjQnMDQuMCJF!5e0!3m2!1sen!2s!4v1760254787421!5m2!1sen!2s",
         descriptions:{
             first:{
                 title:"معرفی دوره پروژه‌های لاراولی",
@@ -3482,4 +2932,455 @@ export const categories = [
         name:"جهادی",
         value:"jihadi2"
     },
+]
+export const exams = [
+    {
+        enNaem:"holland",
+        faName:"آزمون رغبت‌سنجی شغلی Holland",
+        miniDescription:"تست MBTI ابزاری است که برای به دست آوردن بینش در مورد ویژگی های شخصیتی فرد استفاده می شود.",
+        price:200000,
+        question:48,
+        faDetailsName:"تست MBTI، شخصیت شناسی به سبک مایرز بریگز با شناخت خود شغل مناسب‌تری پیدا کنی",
+        detailsDescription:"با شرکت در تست MBTI، اطلاعات دقیق و کاربردی درباره ویژگی‌ها و رفتارهای خود در محیط‌های مختلف کسب کنید. سپس، برای شغل‌هایی که با شخصیت شما همراستا هستند رزومه‌تان را ارسال کنید و از کاری که به شما انگیزه می‌دهد لذت ببرید.",
+        descriptions:[
+            {
+                title:"اهمیت تست MBTI",
+                text:["به‌طور مشخص، تست شخصیت شناسی به افراد کمک می‌کند تا شناخت بهتری از خود و دیگران پیدا کند. این شناخت یکی از باارزش‌ترین خصیصه‌هایی است که افراد در هر سازمان یا مجموعه‌ای می‌توانند در اختیار داشته باشند. اهمیت شناخت صحیح از شخصیت، هم برای سازمان و هم برای افراد، از چنان اهمیتی برای موفقیت فردی و سازمانی برخورد است که به‌هیچ ‌عنوان نمی‌توان آن را دست‌کم گرفت.",
+                     "برای یک استخدام موفق شما می‌توانید پس از انجام تست نتیجه آن را در  رزومه ساز کاربوم به رزومه خود پیوست کنید. با این کار احتمال بررسی رزومه و استخدام خود را بالا ببرید."]
+            },
+            {
+                title:"پیدایش آزمون MBTI",
+                text:["ایزابل مایرز و مادرش کاترین بریگز، هر دو علاقه‌به مند به نظریه انواع شخصیت یونگ بودند و فهمیدند که این تئوری می‌تواند کاربردهایی هم در دنیای واقعی داشته باشد. در طول جنگ جهانی دوم، مایرز و بریگز شاخصی را توسعه دادند که می‌تواند برای شناخت تفاوت‌های فردی، به کار گرفته شود. این دو نفر معتقد بودند اگر تستی طراحی کنند تا مردم شخصیت خودشان را بهتر بشناسند، می‌توانند مشاغلی متناسب با شخصیت خود انتخاب کنند و زندگی سالم‌تر و شادتری داشته باشند.",
+                    "مایرز اولین نسخه کاغذی این تست را در دهه ۱۹۴۰ ایجاد کرد. او به همراه مادرش، این تست را بر روی دوستان و خانواده خود انجام دادند. آن‌ها در دو دهه بعد نیز به توسعه این تست پرداختند.",
+                    "بر اساس پاسخ‌های داده شده به تست MBTI، افراد یکی از ۱۶ نوع شخصیت را دارند. هدف تست این است که افراد، ویژگی‌های شخصیتی خود را از جمله علاقه‌‌مندی‌ها، نقاط قوت، ضعف، اولویت‌های شغلی احتمالی و سازگاری با افراد دیگر را بیشتر کشف و درک کنند.",
+                    "هیچ‌کس «بهترین» شخصیت را ندارد و شخصیت هیچ‌کس، «بهتر» از شخصیت فرد دیگر نیست. همچنین این تست به‌دنبال پیداکردن اختلاف عملکرد یا ناهنجاری نیست؛ در عوض، هدف آن فقط این است که درباره خودتان بیشتر بدانید."
+                ]
+            }
+        ],
+        comments:[
+            {
+                id:2001,
+                userName:"مریم آزاد",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2002,
+                userName:"علی احمدی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2001,
+                userName:"حسین کیانی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            }
+        ],
+        frequrntlyQuestions:[
+            {
+                question:"تست روانشناسی چه نقشی در فرایند استخدام و ارزیابی شغلی دارد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                question:"کدام یک از آزمون‌های خودشناسی می‌تواند به من برای شناخت ترجیحات شغلی‌ام کمک کند؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                quewstion:" کدام تست شخصیت شناسی آنلاین را می‌توان به صورت رایگان انجام داد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            }
+        ]
+    },
+    {
+        enNaem:"neo",
+        faName:"آزمون شخصیت‌شناسی NEO",
+        miniDescription:"تست MBTI ابزاری است که برای به دست آوردن بینش در مورد ویژگی های شخصیتی فرد استفاده می شود.",
+        price:200000,
+        question:48,
+        faDetailsName:"تست MBTI، شخصیت شناسی به سبک مایرز بریگز با شناخت خود شغل مناسب‌تری پیدا کنی",
+        detailsDescription:"با شرکت در تست MBTI، اطلاعات دقیق و کاربردی درباره ویژگی‌ها و رفتارهای خود در محیط‌های مختلف کسب کنید. سپس، برای شغل‌هایی که با شخصیت شما همراستا هستند رزومه‌تان را ارسال کنید و از کاری که به شما انگیزه می‌دهد لذت ببرید.",
+        descriptions:[
+            {
+                title:"اهمیت تست MBTI",
+                text:["به‌طور مشخص، تست شخصیت شناسی به افراد کمک می‌کند تا شناخت بهتری از خود و دیگران پیدا کند. این شناخت یکی از باارزش‌ترین خصیصه‌هایی است که افراد در هر سازمان یا مجموعه‌ای می‌توانند در اختیار داشته باشند. اهمیت شناخت صحیح از شخصیت، هم برای سازمان و هم برای افراد، از چنان اهمیتی برای موفقیت فردی و سازمانی برخورد است که به‌هیچ ‌عنوان نمی‌توان آن را دست‌کم گرفت.",
+                     "برای یک استخدام موفق شما می‌توانید پس از انجام تست نتیجه آن را در  رزومه ساز کاربوم به رزومه خود پیوست کنید. با این کار احتمال بررسی رزومه و استخدام خود را بالا ببرید."]
+            },
+            {
+                title:"پیدایش آزمون MBTI",
+                text:["ایزابل مایرز و مادرش کاترین بریگز، هر دو علاقه‌به مند به نظریه انواع شخصیت یونگ بودند و فهمیدند که این تئوری می‌تواند کاربردهایی هم در دنیای واقعی داشته باشد. در طول جنگ جهانی دوم، مایرز و بریگز شاخصی را توسعه دادند که می‌تواند برای شناخت تفاوت‌های فردی، به کار گرفته شود. این دو نفر معتقد بودند اگر تستی طراحی کنند تا مردم شخصیت خودشان را بهتر بشناسند، می‌توانند مشاغلی متناسب با شخصیت خود انتخاب کنند و زندگی سالم‌تر و شادتری داشته باشند.",
+                    "مایرز اولین نسخه کاغذی این تست را در دهه ۱۹۴۰ ایجاد کرد. او به همراه مادرش، این تست را بر روی دوستان و خانواده خود انجام دادند. آن‌ها در دو دهه بعد نیز به توسعه این تست پرداختند.",
+                    "بر اساس پاسخ‌های داده شده به تست MBTI، افراد یکی از ۱۶ نوع شخصیت را دارند. هدف تست این است که افراد، ویژگی‌های شخصیتی خود را از جمله علاقه‌‌مندی‌ها، نقاط قوت، ضعف، اولویت‌های شغلی احتمالی و سازگاری با افراد دیگر را بیشتر کشف و درک کنند.",
+                    "هیچ‌کس «بهترین» شخصیت را ندارد و شخصیت هیچ‌کس، «بهتر» از شخصیت فرد دیگر نیست. همچنین این تست به‌دنبال پیداکردن اختلاف عملکرد یا ناهنجاری نیست؛ در عوض، هدف آن فقط این است که درباره خودتان بیشتر بدانید."
+                ]
+            }
+        ],
+        comments:[
+            {
+                id:2001,
+                userName:"مریم آزاد",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2002,
+                userName:"علی احمدی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2001,
+                userName:"حسین کیانی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            }
+        ],
+        frequrntlyQuestions:[
+            {
+                question:"تست روانشناسی چه نقشی در فرایند استخدام و ارزیابی شغلی دارد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                question:"کدام یک از آزمون‌های خودشناسی می‌تواند به من برای شناخت ترجیحات شغلی‌ام کمک کند؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                quewstion:" کدام تست شخصیت شناسی آنلاین را می‌توان به صورت رایگان انجام داد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            }
+        ]
+    },
+    {
+        enNaem:"mbti",
+        faName:"آزمون شخصیت‌شناسی MBTI",
+        miniDescription:"تست MBTI ابزاری است که برای به دست آوردن بینش در مورد ویژگی های شخصیتی فرد استفاده می شود.",
+        price:200000,
+        question:48,
+        faDetailsName:"تست MBTI، شخصیت شناسی به سبک مایرز بریگز با شناخت خود شغل مناسب‌تری پیدا کنی",
+        detailsDescription:"با شرکت در تست MBTI، اطلاعات دقیق و کاربردی درباره ویژگی‌ها و رفتارهای خود در محیط‌های مختلف کسب کنید. سپس، برای شغل‌هایی که با شخصیت شما همراستا هستند رزومه‌تان را ارسال کنید و از کاری که به شما انگیزه می‌دهد لذت ببرید.",
+        descriptions:[
+            {
+                title:"اهمیت تست MBTI",
+                text:["به‌طور مشخص، تست شخصیت شناسی به افراد کمک می‌کند تا شناخت بهتری از خود و دیگران پیدا کند. این شناخت یکی از باارزش‌ترین خصیصه‌هایی است که افراد در هر سازمان یا مجموعه‌ای می‌توانند در اختیار داشته باشند. اهمیت شناخت صحیح از شخصیت، هم برای سازمان و هم برای افراد، از چنان اهمیتی برای موفقیت فردی و سازمانی برخورد است که به‌هیچ ‌عنوان نمی‌توان آن را دست‌کم گرفت.",
+                     "برای یک استخدام موفق شما می‌توانید پس از انجام تست نتیجه آن را در  رزومه ساز کاربوم به رزومه خود پیوست کنید. با این کار احتمال بررسی رزومه و استخدام خود را بالا ببرید."]
+            },
+            {
+                title:"پیدایش آزمون MBTI",
+                text:["ایزابل مایرز و مادرش کاترین بریگز، هر دو علاقه‌به مند به نظریه انواع شخصیت یونگ بودند و فهمیدند که این تئوری می‌تواند کاربردهایی هم در دنیای واقعی داشته باشد. در طول جنگ جهانی دوم، مایرز و بریگز شاخصی را توسعه دادند که می‌تواند برای شناخت تفاوت‌های فردی، به کار گرفته شود. این دو نفر معتقد بودند اگر تستی طراحی کنند تا مردم شخصیت خودشان را بهتر بشناسند، می‌توانند مشاغلی متناسب با شخصیت خود انتخاب کنند و زندگی سالم‌تر و شادتری داشته باشند.",
+                    "مایرز اولین نسخه کاغذی این تست را در دهه ۱۹۴۰ ایجاد کرد. او به همراه مادرش، این تست را بر روی دوستان و خانواده خود انجام دادند. آن‌ها در دو دهه بعد نیز به توسعه این تست پرداختند.",
+                    "بر اساس پاسخ‌های داده شده به تست MBTI، افراد یکی از ۱۶ نوع شخصیت را دارند. هدف تست این است که افراد، ویژگی‌های شخصیتی خود را از جمله علاقه‌‌مندی‌ها، نقاط قوت، ضعف، اولویت‌های شغلی احتمالی و سازگاری با افراد دیگر را بیشتر کشف و درک کنند.",
+                    "هیچ‌کس «بهترین» شخصیت را ندارد و شخصیت هیچ‌کس، «بهتر» از شخصیت فرد دیگر نیست. همچنین این تست به‌دنبال پیداکردن اختلاف عملکرد یا ناهنجاری نیست؛ در عوض، هدف آن فقط این است که درباره خودتان بیشتر بدانید."
+                ]
+            }
+        ],
+        comments:[
+            {
+                id:2001,
+                userName:"مریم آزاد",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2002,
+                userName:"علی احمدی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2001,
+                userName:"حسین کیانی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            }
+        ],
+        frequrntlyQuestions:[
+            {
+                question:"تست روانشناسی چه نقشی در فرایند استخدام و ارزیابی شغلی دارد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                question:"کدام یک از آزمون‌های خودشناسی می‌تواند به من برای شناخت ترجیحات شغلی‌ام کمک کند؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                quewstion:" کدام تست شخصیت شناسی آنلاین را می‌توان به صورت رایگان انجام داد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            }
+        ]
+    },
+    {
+        enNaem:"gardner",
+        faName:"آزمون گاردنر",
+        miniDescription:"تست MBTI ابزاری است که برای به دست آوردن بینش در مورد ویژگی های شخصیتی فرد استفاده می شود.",
+        price:200000,
+        question:48,
+        faDetailsName:"تست MBTI، شخصیت شناسی به سبک مایرز بریگز با شناخت خود شغل مناسب‌تری پیدا کنی",
+        detailsDescription:"با شرکت در تست MBTI، اطلاعات دقیق و کاربردی درباره ویژگی‌ها و رفتارهای خود در محیط‌های مختلف کسب کنید. سپس، برای شغل‌هایی که با شخصیت شما همراستا هستند رزومه‌تان را ارسال کنید و از کاری که به شما انگیزه می‌دهد لذت ببرید.",
+        descriptions:[
+            {
+                title:"اهمیت تست MBTI",
+                text:["به‌طور مشخص، تست شخصیت شناسی به افراد کمک می‌کند تا شناخت بهتری از خود و دیگران پیدا کند. این شناخت یکی از باارزش‌ترین خصیصه‌هایی است که افراد در هر سازمان یا مجموعه‌ای می‌توانند در اختیار داشته باشند. اهمیت شناخت صحیح از شخصیت، هم برای سازمان و هم برای افراد، از چنان اهمیتی برای موفقیت فردی و سازمانی برخورد است که به‌هیچ ‌عنوان نمی‌توان آن را دست‌کم گرفت.",
+                     "برای یک استخدام موفق شما می‌توانید پس از انجام تست نتیجه آن را در  رزومه ساز کاربوم به رزومه خود پیوست کنید. با این کار احتمال بررسی رزومه و استخدام خود را بالا ببرید."]
+            },
+            {
+                title:"پیدایش آزمون MBTI",
+                text:["ایزابل مایرز و مادرش کاترین بریگز، هر دو علاقه‌به مند به نظریه انواع شخصیت یونگ بودند و فهمیدند که این تئوری می‌تواند کاربردهایی هم در دنیای واقعی داشته باشد. در طول جنگ جهانی دوم، مایرز و بریگز شاخصی را توسعه دادند که می‌تواند برای شناخت تفاوت‌های فردی، به کار گرفته شود. این دو نفر معتقد بودند اگر تستی طراحی کنند تا مردم شخصیت خودشان را بهتر بشناسند، می‌توانند مشاغلی متناسب با شخصیت خود انتخاب کنند و زندگی سالم‌تر و شادتری داشته باشند.",
+                    "مایرز اولین نسخه کاغذی این تست را در دهه ۱۹۴۰ ایجاد کرد. او به همراه مادرش، این تست را بر روی دوستان و خانواده خود انجام دادند. آن‌ها در دو دهه بعد نیز به توسعه این تست پرداختند.",
+                    "بر اساس پاسخ‌های داده شده به تست MBTI، افراد یکی از ۱۶ نوع شخصیت را دارند. هدف تست این است که افراد، ویژگی‌های شخصیتی خود را از جمله علاقه‌‌مندی‌ها، نقاط قوت، ضعف، اولویت‌های شغلی احتمالی و سازگاری با افراد دیگر را بیشتر کشف و درک کنند.",
+                    "هیچ‌کس «بهترین» شخصیت را ندارد و شخصیت هیچ‌کس، «بهتر» از شخصیت فرد دیگر نیست. همچنین این تست به‌دنبال پیداکردن اختلاف عملکرد یا ناهنجاری نیست؛ در عوض، هدف آن فقط این است که درباره خودتان بیشتر بدانید."
+                ]
+            }
+        ],
+        comments:[
+            {
+                id:2001,
+                userName:"مریم آزاد",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2002,
+                userName:"علی احمدی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2001,
+                userName:"حسین کیانی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            }
+        ],
+        frequrntlyQuestions:[
+            {
+                question:"تست روانشناسی چه نقشی در فرایند استخدام و ارزیابی شغلی دارد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                question:"کدام یک از آزمون‌های خودشناسی می‌تواند به من برای شناخت ترجیحات شغلی‌ام کمک کند؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                quewstion:" کدام تست شخصیت شناسی آنلاین را می‌توان به صورت رایگان انجام داد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            }
+        ]
+    },
+    {
+        enNaem:"watson",
+        faName:"آزمون تفکر انتقادی واتسون-گلیزر",
+        miniDescription:"تست MBTI ابزاری است که برای به دست آوردن بینش در مورد ویژگی های شخصیتی فرد استفاده می شود.",
+        price:200000,
+        question:48,
+        faDetailsName:"تست MBTI، شخصیت شناسی به سبک مایرز بریگز با شناخت خود شغل مناسب‌تری پیدا کنی",
+        detailsDescription:"با شرکت در تست MBTI، اطلاعات دقیق و کاربردی درباره ویژگی‌ها و رفتارهای خود در محیط‌های مختلف کسب کنید. سپس، برای شغل‌هایی که با شخصیت شما همراستا هستند رزومه‌تان را ارسال کنید و از کاری که به شما انگیزه می‌دهد لذت ببرید.",
+        descriptions:[
+            {
+                title:"اهمیت تست MBTI",
+                text:["به‌طور مشخص، تست شخصیت شناسی به افراد کمک می‌کند تا شناخت بهتری از خود و دیگران پیدا کند. این شناخت یکی از باارزش‌ترین خصیصه‌هایی است که افراد در هر سازمان یا مجموعه‌ای می‌توانند در اختیار داشته باشند. اهمیت شناخت صحیح از شخصیت، هم برای سازمان و هم برای افراد، از چنان اهمیتی برای موفقیت فردی و سازمانی برخورد است که به‌هیچ ‌عنوان نمی‌توان آن را دست‌کم گرفت.",
+                     "برای یک استخدام موفق شما می‌توانید پس از انجام تست نتیجه آن را در  رزومه ساز کاربوم به رزومه خود پیوست کنید. با این کار احتمال بررسی رزومه و استخدام خود را بالا ببرید."]
+            },
+            {
+                title:"پیدایش آزمون MBTI",
+                text:["ایزابل مایرز و مادرش کاترین بریگز، هر دو علاقه‌به مند به نظریه انواع شخصیت یونگ بودند و فهمیدند که این تئوری می‌تواند کاربردهایی هم در دنیای واقعی داشته باشد. در طول جنگ جهانی دوم، مایرز و بریگز شاخصی را توسعه دادند که می‌تواند برای شناخت تفاوت‌های فردی، به کار گرفته شود. این دو نفر معتقد بودند اگر تستی طراحی کنند تا مردم شخصیت خودشان را بهتر بشناسند، می‌توانند مشاغلی متناسب با شخصیت خود انتخاب کنند و زندگی سالم‌تر و شادتری داشته باشند.",
+                    "مایرز اولین نسخه کاغذی این تست را در دهه ۱۹۴۰ ایجاد کرد. او به همراه مادرش، این تست را بر روی دوستان و خانواده خود انجام دادند. آن‌ها در دو دهه بعد نیز به توسعه این تست پرداختند.",
+                    "بر اساس پاسخ‌های داده شده به تست MBTI، افراد یکی از ۱۶ نوع شخصیت را دارند. هدف تست این است که افراد، ویژگی‌های شخصیتی خود را از جمله علاقه‌‌مندی‌ها، نقاط قوت، ضعف، اولویت‌های شغلی احتمالی و سازگاری با افراد دیگر را بیشتر کشف و درک کنند.",
+                    "هیچ‌کس «بهترین» شخصیت را ندارد و شخصیت هیچ‌کس، «بهتر» از شخصیت فرد دیگر نیست. همچنین این تست به‌دنبال پیداکردن اختلاف عملکرد یا ناهنجاری نیست؛ در عوض، هدف آن فقط این است که درباره خودتان بیشتر بدانید."
+                ]
+            }
+        ],
+        comments:[
+            {
+                id:2001,
+                userName:"مریم آزاد",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2002,
+                userName:"علی احمدی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2001,
+                userName:"حسین کیانی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            }
+        ],
+        frequrntlyQuestions:[
+            {
+                question:"تست روانشناسی چه نقشی در فرایند استخدام و ارزیابی شغلی دارد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                question:"کدام یک از آزمون‌های خودشناسی می‌تواند به من برای شناخت ترجیحات شغلی‌ام کمک کند؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                quewstion:" کدام تست شخصیت شناسی آنلاین را می‌توان به صورت رایگان انجام داد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            }
+        ]
+    },
+    {
+        enNaem:"belbin",
+        faName:"آزمون بلبین",
+        miniDescription:"تست MBTI ابزاری است که برای به دست آوردن بینش در مورد ویژگی های شخصیتی فرد استفاده می شود.",
+        price:200000,
+        question:48,
+        faDetailsName:"تست MBTI، شخصیت شناسی به سبک مایرز بریگز با شناخت خود شغل مناسب‌تری پیدا کنی",
+        detailsDescription:"با شرکت در تست MBTI، اطلاعات دقیق و کاربردی درباره ویژگی‌ها و رفتارهای خود در محیط‌های مختلف کسب کنید. سپس، برای شغل‌هایی که با شخصیت شما همراستا هستند رزومه‌تان را ارسال کنید و از کاری که به شما انگیزه می‌دهد لذت ببرید.",
+        descriptions:[
+            {
+                title:"اهمیت تست MBTI",
+                text:["به‌طور مشخص، تست شخصیت شناسی به افراد کمک می‌کند تا شناخت بهتری از خود و دیگران پیدا کند. این شناخت یکی از باارزش‌ترین خصیصه‌هایی است که افراد در هر سازمان یا مجموعه‌ای می‌توانند در اختیار داشته باشند. اهمیت شناخت صحیح از شخصیت، هم برای سازمان و هم برای افراد، از چنان اهمیتی برای موفقیت فردی و سازمانی برخورد است که به‌هیچ ‌عنوان نمی‌توان آن را دست‌کم گرفت.",
+                     "برای یک استخدام موفق شما می‌توانید پس از انجام تست نتیجه آن را در  رزومه ساز کاربوم به رزومه خود پیوست کنید. با این کار احتمال بررسی رزومه و استخدام خود را بالا ببرید."]
+            },
+            {
+                title:"پیدایش آزمون MBTI",
+                text:["ایزابل مایرز و مادرش کاترین بریگز، هر دو علاقه‌به مند به نظریه انواع شخصیت یونگ بودند و فهمیدند که این تئوری می‌تواند کاربردهایی هم در دنیای واقعی داشته باشد. در طول جنگ جهانی دوم، مایرز و بریگز شاخصی را توسعه دادند که می‌تواند برای شناخت تفاوت‌های فردی، به کار گرفته شود. این دو نفر معتقد بودند اگر تستی طراحی کنند تا مردم شخصیت خودشان را بهتر بشناسند، می‌توانند مشاغلی متناسب با شخصیت خود انتخاب کنند و زندگی سالم‌تر و شادتری داشته باشند.",
+                    "مایرز اولین نسخه کاغذی این تست را در دهه ۱۹۴۰ ایجاد کرد. او به همراه مادرش، این تست را بر روی دوستان و خانواده خود انجام دادند. آن‌ها در دو دهه بعد نیز به توسعه این تست پرداختند.",
+                    "بر اساس پاسخ‌های داده شده به تست MBTI، افراد یکی از ۱۶ نوع شخصیت را دارند. هدف تست این است که افراد، ویژگی‌های شخصیتی خود را از جمله علاقه‌‌مندی‌ها، نقاط قوت، ضعف، اولویت‌های شغلی احتمالی و سازگاری با افراد دیگر را بیشتر کشف و درک کنند.",
+                    "هیچ‌کس «بهترین» شخصیت را ندارد و شخصیت هیچ‌کس، «بهتر» از شخصیت فرد دیگر نیست. همچنین این تست به‌دنبال پیداکردن اختلاف عملکرد یا ناهنجاری نیست؛ در عوض، هدف آن فقط این است که درباره خودتان بیشتر بدانید."
+                ]
+            }
+        ],
+        comments:[
+            {
+                id:2001,
+                userName:"مریم آزاد",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2002,
+                userName:"علی احمدی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2001,
+                userName:"حسین کیانی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            }
+        ],
+        frequrntlyQuestions:[
+            {
+                question:"تست روانشناسی چه نقشی در فرایند استخدام و ارزیابی شغلی دارد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                question:"کدام یک از آزمون‌های خودشناسی می‌تواند به من برای شناخت ترجیحات شغلی‌ام کمک کند؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                quewstion:" کدام تست شخصیت شناسی آنلاین را می‌توان به صورت رایگان انجام داد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            }
+        ]
+    },
+    {
+        enNaem:"mezaj",
+        faName:"آزمون طبع و مزاج",
+        miniDescription:"تست MBTI ابزاری است که برای به دست آوردن بینش در مورد ویژگی های شخصیتی فرد استفاده می شود.",
+        price:200000,
+        question:48,
+        faDetailsName:"تست MBTI، شخصیت شناسی به سبک مایرز بریگز با شناخت خود شغل مناسب‌تری پیدا کنی",
+        detailsDescription:"با شرکت در تست MBTI، اطلاعات دقیق و کاربردی درباره ویژگی‌ها و رفتارهای خود در محیط‌های مختلف کسب کنید. سپس، برای شغل‌هایی که با شخصیت شما همراستا هستند رزومه‌تان را ارسال کنید و از کاری که به شما انگیزه می‌دهد لذت ببرید.",
+        descriptions:[
+            {
+                title:"اهمیت تست MBTI",
+                text:["به‌طور مشخص، تست شخصیت شناسی به افراد کمک می‌کند تا شناخت بهتری از خود و دیگران پیدا کند. این شناخت یکی از باارزش‌ترین خصیصه‌هایی است که افراد در هر سازمان یا مجموعه‌ای می‌توانند در اختیار داشته باشند. اهمیت شناخت صحیح از شخصیت، هم برای سازمان و هم برای افراد، از چنان اهمیتی برای موفقیت فردی و سازمانی برخورد است که به‌هیچ ‌عنوان نمی‌توان آن را دست‌کم گرفت.",
+                     "برای یک استخدام موفق شما می‌توانید پس از انجام تست نتیجه آن را در  رزومه ساز کاربوم به رزومه خود پیوست کنید. با این کار احتمال بررسی رزومه و استخدام خود را بالا ببرید."]
+            },
+            {
+                title:"پیدایش آزمون MBTI",
+                text:["ایزابل مایرز و مادرش کاترین بریگز، هر دو علاقه‌به مند به نظریه انواع شخصیت یونگ بودند و فهمیدند که این تئوری می‌تواند کاربردهایی هم در دنیای واقعی داشته باشد. در طول جنگ جهانی دوم، مایرز و بریگز شاخصی را توسعه دادند که می‌تواند برای شناخت تفاوت‌های فردی، به کار گرفته شود. این دو نفر معتقد بودند اگر تستی طراحی کنند تا مردم شخصیت خودشان را بهتر بشناسند، می‌توانند مشاغلی متناسب با شخصیت خود انتخاب کنند و زندگی سالم‌تر و شادتری داشته باشند.",
+                    "مایرز اولین نسخه کاغذی این تست را در دهه ۱۹۴۰ ایجاد کرد. او به همراه مادرش، این تست را بر روی دوستان و خانواده خود انجام دادند. آن‌ها در دو دهه بعد نیز به توسعه این تست پرداختند.",
+                    "بر اساس پاسخ‌های داده شده به تست MBTI، افراد یکی از ۱۶ نوع شخصیت را دارند. هدف تست این است که افراد، ویژگی‌های شخصیتی خود را از جمله علاقه‌‌مندی‌ها، نقاط قوت، ضعف، اولویت‌های شغلی احتمالی و سازگاری با افراد دیگر را بیشتر کشف و درک کنند.",
+                    "هیچ‌کس «بهترین» شخصیت را ندارد و شخصیت هیچ‌کس، «بهتر» از شخصیت فرد دیگر نیست. همچنین این تست به‌دنبال پیداکردن اختلاف عملکرد یا ناهنجاری نیست؛ در عوض، هدف آن فقط این است که درباره خودتان بیشتر بدانید."
+                ]
+            }
+        ],
+        comments:[
+            {
+                id:2001,
+                userName:"مریم آزاد",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2002,
+                userName:"علی احمدی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            },
+            {
+                id:2001,
+                userName:"حسین کیانی",
+                rate:"5",
+                qualitativeRate:"عالی",
+                text:"من واقعاً از نکاتی که در این مقاله ارائه شد الهام گرفتم! بنظرم تیپ شخصیتی منو عالی نشون داد واقعا سوالتش خوب بود",
+                day:25
+            }
+        ],
+        frequrntlyQuestions:[
+            {
+                question:"تست روانشناسی چه نقشی در فرایند استخدام و ارزیابی شغلی دارد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                question:"کدام یک از آزمون‌های خودشناسی می‌تواند به من برای شناخت ترجیحات شغلی‌ام کمک کند؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            },
+            {
+                quewstion:" کدام تست شخصیت شناسی آنلاین را می‌توان به صورت رایگان انجام داد؟",
+                answer:"استفاده از انواع تست های خودشناسی و تست شخصیت به مدیران استخدام برای شناسایی متناسب‌ترین افراد برای سازمانشان کمک می‌کند. این کار باعث می‌شود تا هنگام استخدام افراد کلیدی، افراد مناسب بدون هیچ غافلگیری انتخاب شوند.",
+            }
+        ]
+    },
+
 ]

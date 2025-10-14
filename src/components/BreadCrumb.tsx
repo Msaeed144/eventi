@@ -10,18 +10,28 @@ function BreadCrumb() {
   const pathnameHandler = () => {
     if (pathname == "/courses") {
       return "همه ی دوره ها";
+    }else if(pathname == "/exams"){
+      return "آزمون ها"
     }
   };
+  if((splitedPathname[0]=='' && splitedPathname[1])==''){
+    return <></>
+  }else{
   return (
     <div>
       <ul className="flex items-center text-[14px]">
-        <li className=" text-textColor font-normal">
+        <li className={`${pathname == "/courses" && "text-textColor"} ${pathname == "/exams" && "text-white"}   font-normal`}>
           <Link href="/">خانه</Link>
         </li>
-        {splitedPathname.length == 2 && (
-          <li className=" text-primaryColor font-medium mr-2.5">
+        {splitedPathname.length == 2 &&  (
+          <li className={`${pathname == "/courses" && "text-primaryColor"} ${pathname == "/exams" && "text-white font-medium"}  font-medium mr-2.5`}>
             <div className="flex  items-center gap-[9px]">
-              <Image src="/images/icons/breadcrumb.svg" width={4.5} height={9} alt="بعدی"/>
+              {
+                pathname =="/courses" ?
+                  <Image src="/images/icons/breadcrumb.svg" width={4.5} height={9} alt="بعدی"/>
+                :
+                  <Image src="/images/icons/white-breadcrumb.svg" width={4.5} height={9} alt="بعدی"/>
+              }
               <Link href={splitedPathname[0]}>{pathnameHandler()}</Link>
             </div>
           </li>
@@ -29,6 +39,7 @@ function BreadCrumb() {
       </ul>
     </div>
   );
+}
 }
 
 export default BreadCrumb;

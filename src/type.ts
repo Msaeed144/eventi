@@ -32,7 +32,8 @@ export interface Course {
   title: string;
   date: CourseDate;
   Organizer: Organizer;
-  image?: string; 
+  link:string;
+  image: string; 
   special: boolean; 
   status:  string;
   type: string;
