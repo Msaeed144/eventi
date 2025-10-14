@@ -1,12 +1,14 @@
 // src/app/courses/[courseId]/page.tsx
+
 import { courses } from "@/data";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
 import CourseDetails from "@/components/courses/CourseDetails";
 
+// نوع PageProps باید به صورت Promise از params تعریف شود
 type PageProps = {
-  params: { courseId: string }; // params باید به‌طور مستقیم داده شود
+  params: Promise<{ courseId: string }>;
 };
 
 function getCourse(courseId: string) {
@@ -14,7 +16,8 @@ function getCourse(courseId: string) {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const course = getCourse(params.courseId);
+  const { courseId } = await params;  // دسترسی به courseId از Promise
+  const course = getCourse(courseId);
 
   if (!course) {
     return {
@@ -31,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${course.title} | #${course.id}`,
       description: course.Organizer.description,
       type: "article",
-      url: `/courses/${params.courseId}`,
+      url: `/courses/${courseId}`,
       images: course.image
         ? [{ url: course.image, alt: course.title }]
         : [{ url: "/images/og-default.png", alt: "Course" }],
@@ -45,9 +48,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-// ✅ خود صفحه (توجه: params دیگر Promise نیست)
-export default function CourseDetail({ params }: PageProps) {
-  const course = getCourse(params.courseId);
+// ✅ خود صفحه (params به صورت Promise است)
+export default async function CourseDetail({ params }: PageProps) {
+  const { courseId } = await params;  // دسترسی به courseId از Promise
+  const course = getCourse(courseId);
 
   if (!course) {
     notFound(); // نیازی به return نیست؛ اینجا throw می‌کند
