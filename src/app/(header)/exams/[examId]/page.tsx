@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import React from 'react';
 
 type PageProps = {
-  params: { examId: string };
+  params: Promise<{ examId: string }>;
 };
 
 function getExam(examId: string) {
@@ -13,7 +13,7 @@ function getExam(examId: string) {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { examId } = params;
+  const { examId } =await params;
   const exam = getExam(examId);
 
   if (!exam) {
@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function CourseDetail({ params }: PageProps) {
-  const { examId } = params;
+export default async function CourseDetail({ params }: PageProps) {
+  const { examId } =await params;
   console.log('[CourseDetail] examId=', examId);
   console.log('[CourseDetail] exams count=', Array.isArray(exams) ? exams.length : typeof exams);
 
