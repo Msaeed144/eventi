@@ -1,8 +1,9 @@
 @import "tailwindcss";
 /* @import url(../../public/fonts/css/fontiran.css);
 @import url(../../public/fonts/css/Gofteh.css); */
-@import url("/fonts/css/fontiran.css"); 
-@import url("/fonts/css/Gofteh.css");
+
+@import url(/fonts/css/fontiran.css);
+@import url(/fonts/css/Gofteh.css);
 @theme {
   --color-primaryColor:#1565C0;
   --color-secondaryColor:#F2F9FF;
@@ -15,7 +16,8 @@
   --radius-lg:30px;
 }
 body {
-  font-family: dana;
+  color: #323232;
+  font-family: dana !important;
   font-weight: normal;
   text-align: justify;
   margin-top: 0;
@@ -325,7 +327,7 @@ cursor: pointer;
   background-color: #BDCEDE; /* رنگ در حالت hover */
   cursor: pointer;
 }
-.MuiPaper-root {
+.courseFilterSection .MuiPaper-root {
   border-radius: 12px !important;
   box-shadow: none !important;
   border: 1px solid #ddd;
@@ -398,4 +400,28 @@ background: linear-gradient(90deg, rgba(21, 101, 192, 1) 0%, rgba(187, 222, 251,
 .statusRate svg {
   width: 16px !important;
   height: 16px;
+}
+.frqSec .MuiPaper-root{
+  box-shadow: none !important;
+  border-bottom: 1px solid #DDD;
+  
+}
+.frqSec .Mui-expanded {
+  background-color: #E3F2FD !important;
+}
+.frqSec .MuiAccordion-heading span{
+  font-weight: 600 !important;
+}
+.dashboardBoxShadow {
+  -webkit-box-shadow: 0px 1px 40px 8px rgba(28,76,96,0.08); 
+box-shadow: 0px 1px 40px 8px rgba(28,76,96,0.08);
+}
+.dashboard .MuiLinearProgress-root {
+  height: 10px !important;
+  border-radius: 29px !important;
+  background-color: #E3F2FD !important;
+}
+.dashboard .MuiLinearProgress-bar {
+  border-radius: 290px !important;
+  background-color: #1565C0!important;
 }
