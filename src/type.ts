@@ -52,3 +52,34 @@ export interface Organaizer {
     name:string;
     rate:number
 }
+export type DescriptionItem = {
+  title: string;
+  text: string[];
+};
+
+export type CommentItem = {
+  id: number;
+  userName: string;
+  rate: number;            // بهتره عدد باشه
+  qualitativeRate: string;
+  text: string;
+  day: number;
+};
+
+export type FAQItem = {
+  question: string;
+  answer: string;
+};
+
+export interface ExamItem {
+  enName: string;
+  faName: string;
+  miniDescription: string;
+  price: number;
+  question: number;
+  faDetailsName: string;
+  detailsDescription: string;
+  descriptions: DescriptionItem[];
+  comments: CommentItem[];
+  frequentlyQuestions: FAQItem[];
+}

@@ -1,14 +1,18 @@
-'use client'
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import BreadCrumb from "./BreadCrumb";
+import BreadCrumb from "../BreadCrumb";
 import { usePathname } from "next/navigation";
 
 function ExamsBanner() {
   const pathname = usePathname();
   return (
-    <div className={`examBanner ${pathname == "/" ? "py-16":"py-8"}  my-12  relative`}>
+    <div
+      className={`examBanner ${
+        pathname == "/" ? "py-16" : "py-8"
+      }  my-12  relative`}
+    >
       <div className=" absolute top-0 left-0">
         <div>
           <Image
@@ -29,10 +33,10 @@ function ExamsBanner() {
           />
         </div>
         <div className="w-2/3">
-        <div>
-              <BreadCrumb />
-        </div>
-          <div className={`flex gap-2 ${pathname!= "/" && "mt-7"}`}>
+          <div>
+            <BreadCrumb />
+          </div>
+          <div className={`flex gap-2 ${pathname != "/" && "mt-7"}`}>
             <div>
               <Image
                 src="/images/icons/exam-icon.svg"
@@ -50,23 +54,20 @@ function ExamsBanner() {
               بهبود روابط شخصی و حرفه‌ای و همچنین رشد فردی مؤثر باشد.
             </p>
           </div>
-          {
-            pathname =="/" && (
-<Link
-            href="/exams"
-            className="flex gap-2 border border-white w-40 text-white rounded-sm py-2 justify-center mt-5"
-          >
-            <p>مشاهده آزمون ها</p>
-            <Image
-              src="/images/icons/white-diagonal.svg"
-              width={20}
-              height={20}
-              alt="ورود"
-            />
-          </Link>
-            )
-          }
-          
+          {pathname == "/" && (
+            <Link
+              href="/exams"
+              className="flex gap-2 border border-white w-40 text-white rounded-sm py-2 justify-center mt-5"
+            >
+              <p>مشاهده آزمون ها</p>
+              <Image
+                src="/images/icons/white-diagonal.svg"
+                width={20}
+                height={20}
+                alt="ورود"
+              />
+            </Link>
+          )}
         </div>
 
         <div></div>

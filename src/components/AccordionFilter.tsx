@@ -8,7 +8,7 @@ import { categories } from "@/data";
 
 function AccordionFilter() {
   return (
-    <div className="mt-4">
+    <div className="mt-4 courseFilterSection">
       <div className="mb-2">
         <Accordion
           defaultExpanded
