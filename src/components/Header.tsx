@@ -61,6 +61,7 @@ function Header() {
 
             {/* 🔽 دکمه ورود و ایجاد رویداد */}
             <div className="flex flex-row-reverse items-center gap-4">
+              
               <div className="ml-4 cursor-pointer w-40 flex justify-center border border-strokeColor items-center rounded-sm h-12">
                 <span className="ml-2">ثبت نام / ورود</span>
                 <Image
@@ -72,7 +73,6 @@ function Header() {
                 />
               </div>
 
-              {/* 🔹 دکمه ایجاد رویداد */}
               <div
                 ref={createBtnRef}
                 onClick={() => setHeader(!header)}
@@ -92,10 +92,9 @@ function Header() {
                   />
                 </div>
               </div>
+              
             </div>
           </div>
-
-          {/* 🔽 منوی دوم (دسته‌بندی‌ها) */}
           <div className="bg-tertiaryColor mx-auto flex justify-between px-8 py-3 w-[1180px] rounded-b-md">
             <ul className="flex justify-around font-medium text-base gap-0 z-40">
               <Link href="/courses">
@@ -166,7 +165,6 @@ function Header() {
             </div>
           </div>
         </div>
-
         {/*باکس ایجاد رویداد (اصلی) */}
         <div
           ref={headerBoxRef}

@@ -85,10 +85,10 @@ function Personal() {
               />
               <label
                 htmlFor="firstName"
-                className={` cursor-text absolute right-2 text-[#667085]  font-normal bg-white px-1 transition-all duration-200 ${
+                className={` cursor-text absolute right-[15px] text-[#667085]  bg-white px-1 transition-all duration-200 ${
                   firstNameFocused || firstNameValue
-                    ? "translate-y-[-10px] text-[11px] text-primaryColor"
-                    : "translate-y-3 text-[14px]"
+                    ? "translate-y-[-10px] text-[11px] font-bold text-primaryColor"
+                    : "translate-y-[14px] text-[14px] font-medium"
                 }`}
               >
                 نام
@@ -108,10 +108,10 @@ function Personal() {
               />
               <label
                 htmlFor="lastName"
-                className={` cursor-text absolute right-2 text-[#667085]  font-normal bg-white px-1 transition-all duration-200 ${
+                className={` cursor-text absolute right-[15px] text-[#667085] bg-white px-1 transition-all duration-200 ${
                   lastNameFocused || lastNameValue
                     ? "translate-y-[-10px] text-[11px] text-primaryColor"
-                    : "translate-y-3 text-[14px]"
+                    : "translate-y-[14px] text-[14px] font-medium"
                 }`}
               >
                 نام خانوادگی
@@ -135,7 +135,7 @@ function Personal() {
 
               <label
                 htmlFor="married"
-                className={` absolute block right-3 text-gray-700 bg-white mb-1 cursor-pointer transition-all duration-200 ${
+                className={` absolute block right-[15px] text-gray-700 bg-white mb-1 cursor-pointer transition-all duration-200 ${
                   marriedFocused || marriedValue
                     ? "translate-y-[-55px] text-[11px]"
                     : "-translate-y-8 text-[14px]"
@@ -161,7 +161,7 @@ function Personal() {
 
               <label
                 htmlFor="gender"
-                className={` absolute block right-3 text-gray-700 bg-white mb-1 cursor-pointer transition-all duration-200 ${
+                className={` absolute block right-[15px] text-gray-700 bg-white mb-1 cursor-pointer transition-all duration-200 ${
                   genderFocused || genderValue
                     ? "translate-y-[-55px] text-[11px]"
                     : "-translate-y-8 text-[14px]"
@@ -203,10 +203,10 @@ function Personal() {
               />
               <label
                 htmlFor="melliCode"
-                className={` cursor-text absolute right-2 text-[#667085]  font-normal bg-white px-1 transition-all duration-200 ${
+                className={` cursor-text absolute right-[15px] text-[#667085] bg-white px-1 transition-all duration-200 ${
                   melliCodeFocused || melliCodeValue
                     ? "translate-y-[-10px] text-[11px] text-primaryColor"
-                    : "translate-y-3 text-[14px]"
+                    : "translate-y-[14px] text-[14px] font-medium"
                 }`}
               >
                 کد ملی
@@ -271,7 +271,7 @@ function Personal() {
             {genderValue == "male" && (
               <div className="relative col-span-6">
                 <select
-                  onChange={(e) => setActivityValue(e.target.value)}
+                  onChange={(e) => setVazifeValue(e.target.value)}
                   value={vazifeValue}
                   onFocus={() => setVazifeFocused(true)}
                   onBlur={() => setVazifeFocused(false)}
@@ -369,7 +369,7 @@ function Personal() {
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-end gap-[15px]">
+        <div className="w-full flex justify-end mt-20 gap-[15px]">
           <button className="cursor-pointer border border-strokeColor rounded-sm font-semibold h-12 w-40 flex justify-center items-center">انصراف</button>
           <button type="submit" className="cursor-pointer rounded-sm font-semibold bg-primaryColor text-white h-12 w-40 flex justify-center items-center">ثبت اطلاعات</button>
         </div>

@@ -1,9 +1,7 @@
 @import "tailwindcss";
-/* @import url(../../public/fonts/css/fontiran.css);
-@import url(../../public/fonts/css/Gofteh.css); */
+@import url(../../public/fonts/css/fontiran.css);
+@import url(../../public/fonts/css/Gofteh.css);
 
-@import url(/fonts/css/fontiran.css);
-@import url(/fonts/css/Gofteh.css);
 @theme {
   --color-primaryColor:#1565C0;
   --color-secondaryColor:#F2F9FF;
@@ -15,6 +13,7 @@
   --radius-md:20px;
   --radius-lg:30px;
 }
+
 body {
   color: #323232;
   font-family: dana !important;
@@ -413,8 +412,8 @@ background: linear-gradient(90deg, rgba(21, 101, 192, 1) 0%, rgba(187, 222, 251,
   font-weight: 600 !important;
 }
 .dashboardBoxShadow {
-  -webkit-box-shadow: 0px 1px 40px 8px rgba(28,76,96,0.08); 
-box-shadow: 0px 1px 40px 8px rgba(28,76,96,0.08);
+  -webkit-box-shadow: 0px 1px 40px 8px rgba(28,76,96,0.05); 
+   box-shadow: 0px 1px 40px 8px rgba(28,76,96,0.05);
 }
 .dashboard .MuiLinearProgress-root {
   height: 10px !important;
@@ -424,4 +423,7 @@ box-shadow: 0px 1px 40px 8px rgba(28,76,96,0.08);
 .dashboard .MuiLinearProgress-bar {
   border-radius: 290px !important;
   background-color: #1565C0!important;
+}
+.addBoxShadow {
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
