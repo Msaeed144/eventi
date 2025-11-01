@@ -9,7 +9,7 @@ import  Article  from "@/components/dashboard/Article";
 import React, { useState } from "react";
 
 function Page() {
-  const [ tab , setTab ] = useState("olympiad")
+  const [ tab , setTab ] = useState("education")
   return (
     <div className="col-span-9 relative">
       <DashboardBreadCrumb />

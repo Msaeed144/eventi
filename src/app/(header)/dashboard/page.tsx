@@ -8,13 +8,12 @@ import { resumeDashboard } from "@/data";
 import Link from "next/link";
 
 function Page() {
-  // یک آرایه برای نگه داشتن مقادیر پروگرس هر آیتم
   const [progressValues, setProgressValues] = useState(
     resumeDashboard.map(() => 0)
   );
 
   useEffect(() => {
-    const duration = 1000; // 2 ثانیه
+    const duration = 1000;
     const intervalTime = 20;
 
     // ایجاد یک تایمر برای هر آیتم
@@ -32,19 +31,13 @@ function Page() {
         });
       }, intervalTime);
     });
-
-    // پاک کردن تمام تایمرها در unmount
     return () => {
       timers.forEach((timer) => clearInterval(timer));
     };
   }, []);
-
   return (
-    
-
         <div className="col-span-9">
           <DashboardBreadCrumb />
-
           <div className="grid grid-cols-12 gap-6">
             {resumeDashboard.map((item, index) => (
               <div
@@ -114,10 +107,9 @@ function Page() {
                           ? "/dashboard/job"
                           : item.type === "education"
                           ? "/dashboard/education"
-                          : "/dashboard/resume.svg"
+                          : "/dashboard/resume"
                       }
-                      className=" mt-4 py-2 border border-tertiaryColor rounded-sm flex justify-center items-center"
-                    >
+                      className=" mt-4 py-2 border border-tertiaryColor rounded-sm flex justify-center items-center">
                       <p>تکمیل اطلاعات</p>
                     </Link>
                   )}

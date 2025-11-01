@@ -18,6 +18,8 @@ function DashboardBreadCrumb() {
       return "سوابق شغلی و تشکیلاتی"
     } else if (pathname == "/dashboard/education"){
       return "اطلاعات سوابق علمی"
+    } else if (pathname =="/dashboard/resume"){
+      return "آپلود رزومه"
     }
   };
   return (

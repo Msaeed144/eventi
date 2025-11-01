@@ -408,8 +408,8 @@ function Education() {
 
                   <label
                     htmlFor="grade-select"
-                    className={` absolute block right-3 text-gray-700 bg-white mb-1 cursor-pointer transition-all duration-200 ${
-                      gradeFocused || university.grade ? "translate-y-[-45px] text-[11px] text-primaryColor" : "-translate-y-8 text-[14px]"
+                    className={` absolute px-1 block right-3 text-gray-700 bg-white mb-1 cursor-pointer transition-all duration-200 ${
+                      gradeFocused || university.grade ? "translate-y-[-55px] text-[11px] text-primaryColor" : "-translate-y-8 text-[14px]"
                     }`}
                   >
                     مقطع
@@ -436,8 +436,8 @@ function Education() {
 
                   <label
                     htmlFor="type-select"
-                    className={` absolute block right-3 text-gray-700 bg-white mb-1 cursor-pointer transition-all duration-200 ${
-                      universityTypeFocused || university.type ? "translate-y-[-45px] text-[11px] text-primaryColor" : "-translate-y-8 text-[14px]"
+                    className={` absolute block px-1 right-3 text-gray-700 bg-white mb-1 cursor-pointer transition-all duration-200 ${
+                      universityTypeFocused || university.type ? "translate-y-[-55px] text-[11px] text-primaryColor" : "-translate-y-8 text-[14px]"
                     }`}
                   >
                     نوع دانشگاه

@@ -248,9 +248,9 @@ function Olympiad() {
 
                 <label
                   htmlFor="grade-select"
-                  className={` absolute block right-3 text-gray-700 bg-white mb-1 cursor-pointer transition-all duration-200 ${
+                  className={` absolute px-1 block right-3 text-gray-700 bg-white mb-1 cursor-pointer transition-all duration-200 ${
                     typeFocused || olympiad.type
-                      ? "translate-y-[-45px] text-[11px] text-primaryColor"
+                      ? "translate-y-[-55px] text-[11px] text-primaryColor"
                       : "-translate-y-8 text-[14px]"
                   }`}
                 >

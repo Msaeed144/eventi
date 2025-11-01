@@ -164,3 +164,15 @@ export type ConferanceType = {
   link: string,
   description: string,
 }
+
+export type InventionType = {
+  id: string;
+  title: string;
+  status: string;
+  seryalNumber: string;
+  year: string;
+  description: string;
+  bonyadHistory: boolean;
+  activityReport: string;
+  file?: File | null;
+};
