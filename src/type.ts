@@ -83,3 +83,96 @@ export interface ExamItem {
   comments: CommentItem[];
   frequentlyQuestions: FAQItem[];
 }
+ export type Specialty = {
+  id: string; // برای کلید یکتا
+  type: string;
+  skill: string;
+  level: string;
+  link: string;
+  description: string;
+};
+export type Jobs = {
+  id: string;
+  title:string;
+  company:string;
+  start:string;
+  end:string;
+  type:string;
+  level:string;
+  description:string
+
+}
+export type Tashakol = {
+  id:string;
+  name:string;
+  type:string;
+  role:string;
+  start:string;
+  time:string;
+  description:string;
+}
+export type University = {
+  id:string;
+  grade:string;
+  type:string;
+  field:string;
+  trend:string;
+  uniname:string;
+  uniend:string
+}
+export type Howze = {
+  id:string;
+  hzlevel:string;
+  hzname:string;
+  hzstart:string;
+  hzend:string;
+}
+export type ArticleType = {
+  id:string;
+  name:string;
+  type:string;
+  status:string;
+  link:string;
+  ddrcode:string;
+  description:string
+}
+export type OlympiadType ={
+  id:string
+   name:string,
+    type:string,
+    year:string,
+    rank:string,
+    description:string, 
+}
+export type BooksType = {
+    id:string,
+    name:string,
+    subject:string,
+    status:string,
+    year:string,
+    role:string,
+    shabek:string,
+    description:string,
+}
+export type ConferanceType = {
+  id:string,
+  conferanceName: string,
+  articleName: string,
+  articleType: string,
+  articleStatus:string,
+  year:string,
+  link: string,
+  description: string,
+}
+
+export type InventionType = {
+  id: string;
+  title: string;
+  status: string;
+  seryalNumber: string;
+  year: string;
+  description: string;
+  bonyadHistory: boolean;
+  activityReport: string;
+  file?: File | null;
+};

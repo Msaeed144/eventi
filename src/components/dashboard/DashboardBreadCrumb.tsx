@@ -10,6 +10,16 @@ function DashboardBreadCrumb() {
   const pathnameHandler = () => {
     if (pathname == "/dashboard/personal") {
       return "اطلاعات فردی";
+    }else if (pathname == "/dashboard/contact") {
+      return "اطلاعات تماس";
+    } else if (pathname == "/dashboard/specialized") {
+      return "حوزه های تخصصی"
+    } else if (pathname == "/dashboard/job"){
+      return "سوابق شغلی و تشکیلاتی"
+    } else if (pathname == "/dashboard/education"){
+      return "اطلاعات سوابق علمی"
+    } else if (pathname =="/dashboard/resume"){
+      return "آپلود رزومه"
     }
   };
   return (
@@ -19,13 +29,13 @@ function DashboardBreadCrumb() {
           <div className="mb-1">
             <Image
               src="/images/icons/resume.svg"
-              width={20}
-              height={25}
+              width={30}
+              height={30}
               alt="رزومه"
             />
           </div>
           <ul className="flex items-center text-[14px]">
-            <li className="font-medium text-xl">
+            <li className="font-medium text-lg">
               <Link href="/dashboard">تکمیل رزومه</Link>
             </li>
             {splitedPathname.length == 3 && (
@@ -36,7 +46,7 @@ function DashboardBreadCrumb() {
               >
                 <div className="flex  items-center gap-[9px]">
                   <Image src="/images/icons/left-breadcrumb.svg" width={6} height={12} alt="بعدی" />
-                  <Link className="text-xl font-medium" href={splitedPathname[0]}>{pathnameHandler()}</Link>
+                  <Link className="text-lg font-medium" href={splitedPathname[0]}>{pathnameHandler()}</Link>
                 </div>
               </li>
             )}
