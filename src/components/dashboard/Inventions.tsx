@@ -1,7 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Image from "next/image";
+
 type FormState = {
   title: string;
   status: string;
@@ -13,6 +14,7 @@ type FormState = {
   file: File | null;
 };
 type InventionTypeLocal = FormState & { id: string };
+
 const Inventions: React.FC = () => {
   const [invention, setInvention] = useState<FormState>({
     title: "",
@@ -37,19 +39,40 @@ const Inventions: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
 
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  // مدیریت overflow روی body و showModal animation
   useEffect(() => {
     if (isModalOpen) {
       document.body.classList.add("blurred");
+      // جلوگیری از اسکرول پس‌زمینه
+      document.body.style.overflow = "hidden";
+      // تا انیمیشن با requestAnimationFrame هماهنگ باشه
       requestAnimationFrame(() => setShowModal(true));
     } else {
       setShowModal(false);
+      // بازگرداندن اسکرول
+      document.body.style.overflow = "";
       document.body.classList.remove("blurred");
     }
+
+    // cleanup در صورت unmount شدن کامپوننت
+    return () => {
+      document.body.style.overflow = "";
+      document.body.classList.remove("blurred");
+    };
   }, [isModalOpen]);
 
+  // revoke همهٔ URLها هنگام unmount یا تغییر نگاشت
   useEffect(() => {
     return () => {
-      Object.values(fileUrls).forEach((u) => URL.revokeObjectURL(u));
+      Object.values(fileUrls).forEach((u) => {
+        try {
+          URL.revokeObjectURL(u);
+        } catch {
+          /* ignore */
+        }
+      });
     };
   }, [fileUrls]);
 
@@ -69,6 +92,11 @@ const Inventions: React.FC = () => {
     setseryalNumberFocused(false);
     setYearFocused(false);
     setHistoryFocused(false);
+
+    // reset input[type=file] so same file can be selected again
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
   };
 
   const closeModal = () => {
@@ -77,44 +105,40 @@ const Inventions: React.FC = () => {
       setIsModalOpen(false);
       setEditingId(null);
       clearForm();
-    }, 300);
+    }, 300); // زمان هماهنگ با transition
   };
 
-  // type-safe change handler: bonyadHistory is stored as a string
+  // type-safe change handler
   const changeHandler = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const name = e.target.name;
     const value = e.target.value;
 
-    if (name === "bonyadHistory") {
-      setInvention((prev) => ({ ...prev, bonyadHistory: value }));
-      return;
-    }
-
-    if (name === "title") {
-      setInvention((prev) => ({ ...prev, title: value }));
-      return;
-    }
-    if (name === "status") {
-      setInvention((prev) => ({ ...prev, status: value }));
-      return;
-    }
-    if (name === "seryalNumber") {
-      setInvention((prev) => ({ ...prev, seryalNumber: value }));
-      return;
-    }
-    if (name === "year") {
-      setInvention((prev) => ({ ...prev, year: value }));
-      return;
-    }
-    if (name === "description") {
-      setInvention((prev) => ({ ...prev, description: value }));
-      return;
-    }
-    if (name === "activityReport") {
-      setInvention((prev) => ({ ...prev, activityReport: value }));
-      return;
+    switch (name) {
+      case "bonyadHistory":
+        setInvention((prev) => ({ ...prev, bonyadHistory: value }));
+        return;
+      case "title":
+        setInvention((prev) => ({ ...prev, title: value }));
+        return;
+      case "status":
+        setInvention((prev) => ({ ...prev, status: value }));
+        return;
+      case "seryalNumber":
+        setInvention((prev) => ({ ...prev, seryalNumber: value }));
+        return;
+      case "year":
+        setInvention((prev) => ({ ...prev, year: value }));
+        return;
+      case "description":
+        setInvention((prev) => ({ ...prev, description: value }));
+        return;
+      case "activityReport":
+        setInvention((prev) => ({ ...prev, activityReport: value }));
+        return;
+      default:
+        return;
     }
   };
 
@@ -130,11 +154,15 @@ const Inventions: React.FC = () => {
       setAllInvention((prev) =>
         prev.map((it) => {
           if (it.id === editingId) {
-            // revoke old url if file replaced
+            // revoke old url if file replaced (نام متفاوت)
             if (it.file && invention.file && it.file.name !== invention.file.name) {
               const oldUrl = fileUrls[it.id];
               if (oldUrl) {
-                URL.revokeObjectURL(oldUrl);
+                try {
+                  URL.revokeObjectURL(oldUrl);
+                } catch {
+                  /* ignore */
+                }
                 setFileUrls((prevUrls) => {
                   const copy = { ...prevUrls };
                   delete copy[it.id];
@@ -142,10 +170,30 @@ const Inventions: React.FC = () => {
                 });
               }
             }
+
             const updated: InventionTypeLocal = { ...it, ...invention };
+            // اگر فایل جدید وجود داشت، حتما url موقت بساز
             if (updated.file) {
-              const url = URL.createObjectURL(updated.file);
-              setFileUrls((prev) => ({ ...prev, [it.id]: url }));
+              // اگر قبلا url نداشت یا فایل جدید است، که url بسازیم
+              const existingUrl = fileUrls[it.id];
+              if (!existingUrl || (it.file && updated.file && it.file.name !== updated.file.name)) {
+                const url = URL.createObjectURL(updated.file);
+                setFileUrls((prev) => ({ ...prev, [it.id]: url }));
+              }
+            } else {
+              // اگر فایل حذف شده بود، پاک کن mapping را
+              if (fileUrls[it.id]) {
+                try {
+                  URL.revokeObjectURL(fileUrls[it.id]);
+                } catch {
+                  /* ignore */
+                }
+                setFileUrls((prev) => {
+                  const copy = { ...prev };
+                  delete copy[it.id];
+                  return copy;
+                });
+              }
             }
             return updated;
           }
@@ -178,6 +226,17 @@ const Inventions: React.FC = () => {
       file: item.file ?? null,
     });
     setEditingId(item.id);
+
+    // اگر آیتم فایل دارد ولی هنوز URL ساخته نشده، بساز
+    if (item.file && !fileUrls[item.id]) {
+      try {
+        const url = URL.createObjectURL(item.file);
+        setFileUrls((prev) => ({ ...prev, [item.id]: url }));
+      } catch {
+        /* ignore */
+      }
+    }
+
     requestAnimationFrame(() => {
       setIsModalOpen(true);
       setShowModal(true);
@@ -187,7 +246,11 @@ const Inventions: React.FC = () => {
   const handleDelete = (id: string) => {
     setAllInvention((prev) => prev.filter((it) => it.id !== id));
     if (fileUrls[id]) {
-      URL.revokeObjectURL(fileUrls[id]);
+      try {
+        URL.revokeObjectURL(fileUrls[id]);
+      } catch {
+        /* ignore */
+      }
       setFileUrls((prev) => {
         const copy = { ...prev };
         delete copy[id];
@@ -233,9 +296,14 @@ const Inventions: React.FC = () => {
                   <p>لینک فایل:</p>
                   <p className="font-semibold mr-1">
                     {item.file ? (
-                      <a href={getFileUrl(item.id)} download={item.file.name} className="underline">
-                        دانلود {item.file.name}
-                      </a>
+                      getFileUrl(item.id) ? (
+                        <a href={getFileUrl(item.id)} download={item.file.name} className="underline">
+                          دانلود {item.file.name}
+                        </a>
+                      ) : (
+                        // اگر به هر دلیلی url موجود نباشد، نشان بده که فایل هست اما قابل دانلود نیست
+                        <span>{item.file.name}</span>
+                      )
                     ) : (
                       "—"
                     )}
@@ -272,16 +340,22 @@ const Inventions: React.FC = () => {
 
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
+          {/* overlay */}
           <div className={`absolute inset-0 bg-white/30 backdrop-blur-[4px] transition-opacity duration-100 ${showModal ? "opacity-100" : "opacity-0"}`} />
 
-          <div className={`bg-white addBoxShadow p-6 rounded-md z-10 py-[30px] px-10 transform transition-all duration-500 ease-out ${showModal ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
+          {/* modal box: حتماً max-h و overflow-auto اضافه شده */}
+          <div
+            className={`bg-white addBoxShadow p-6 rounded-md z-10 py-[30px] px-10 transform transition-all duration-500 ease-out
+              ${showModal ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}
+              w-[min(95%,900px)] max-h-[90vh] overflow-auto`}
+          >
             <div className="mb-[30px] pl-[591px] pr-[25px] py-4 bg-tertiaryColor rounded-sm">
               <p className="font-bold">{editingId ? "ویرایش اختراعات / بنیاد نخبگان" : "افزودن اختراعات / بنیاد نخبگان"}</p>
             </div>
 
             <form onSubmit={handleSubmit} className="w-full">
               <div className="rounded-md border border-dashed border-boxGrey">
-                <input type="file" name="file" id="file" className="hidden" onChange={handleFileChange} />
+                <input ref={fileInputRef} type="file" name="file" id="file" className="hidden" onChange={handleFileChange} />
                 <label htmlFor="file" className=" cursor-pointer w-full bg-[#fafafa] block flex-col text-center justify-center items-center rounded-md ">
                   <div className="flex justify-center pt-7">
                     <Image src="/images/icons/upload-file.svg" width={60} height={60} alt="فایل را انتخاب کنید" />

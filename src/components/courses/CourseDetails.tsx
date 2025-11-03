@@ -48,40 +48,46 @@ function CourseDetails({ course }: CourseCartProps) {
           {/* پایان عنوان */}
           {/* تاریخ مدت زمان لایک */}
           <div className=" flex justify-between text-white text-sm">
-            <div className="flex gap-1 items-center">
-              <Image
-                className="mb-1"
-                src="/images/icons/calendar.svg"
-                width={18}
-                height={20}
-                alt="تقویم"
-              />
-              <div className="flex gap-0.5 mt-">
-                <p>تاریخ شروع:</p>
-                <p>{course.date.day}</p>
-                <p>{course.date.month}</p>
-                <p>{course.date.year}</p>
-                <p>-</p>
-                <p>ساعت {course.date.houre}</p>
+            <div className="flex items-center gap-2">
+              <div className="flex gap-1 items-center">
+                <Image
+                  className="mb-1"
+                  src="/images/icons/calendar.svg"
+                  width={18}
+                  height={20}
+                  alt="تقویم"
+                />
+                <div className="flex gap-0.5">
+                  <p>تاریخ شروع:</p>
+                  <p>{course.date.day}</p>
+                  <p>{course.date.month}</p>
+                  <p>{course.date.year}</p>
+                  <p>-</p>
+                  <p>ساعت {course.date.houre}</p>
+                </div>
+              </div>
+              <div className="w-[1px] h-[22px] bg-white"></div>
+              <div className="flex gap-1">
+                <Image
+                  src="/images/icons/clock.svg"
+                  width={20}
+                  height={20}
+                  alt="تقویم"
+                />
+
+                <p>{course.time}</p>
+                <p>ساعت</p>
               </div>
             </div>
-            <div className="flex gap-1">
-              <Image
-                src="/images/icons/calendar.svg"
-                width={20}
-                height={20}
-                alt="تقویم"
-              />
-              <p className="mt-1">مدت زمان:</p>
-              <p className="mt-1">{course.time}</p>
-              <p className="mt-1">ساعت</p>
-            </div>
-            <div>
+
+            <div className="flex gap-2.5">
+              <div className="w-[1px] h-[22px] bg-white"></div>
+
               <Image
                 className="mb-1"
-                src="/images/icons/white-heart-border.svg"
-                width={20}
-                height={20}
+                src="/images/icons/no-save.svg"
+                width={24}
+                height={24}
                 alt="تقویم"
               />
             </div>
@@ -99,20 +105,6 @@ function CourseDetails({ course }: CourseCartProps) {
                     <p className="text-[18px] font-semibold">
                       {course.Organizer.name}
                     </p>
-                    <Rating
-                      name="user-rating-display"
-                      value={course.Organizer.rate}
-                      precision={0.5}
-                      readOnly
-                      sx={{
-                        direction: "ltr",
-                        "& .MuiRating-icon": { margin: 0 },
-                        "& .MuiRating-icon + .MuiRating-icon": {
-                          marginLeft: "2px",
-                          marginRight: 0,
-                        },
-                      }}
-                    />
                   </div>
                   <div>
                     <p className=" leading-7">{course.Organizer.description}</p>
@@ -120,7 +112,21 @@ function CourseDetails({ course }: CourseCartProps) {
                 </div>
               </div>
             </div>
-            <div className="mt-5 mb-[20px]">
+            <div className="mt-5 mb-[20px] flex justify-between items-center">
+              <Rating
+                name="user-rating-display"
+                value={course.Organizer.rate}
+                precision={0.5}
+                readOnly
+                sx={{
+                  direction: "ltr",
+                  "& .MuiRating-icon": { margin: 0 },
+                  "& .MuiRating-icon + .MuiRating-icon": {
+                    marginLeft: "2px",
+                    marginRight: 0,
+                  },
+                }}
+              />
               <div className="w-[160px] h-10 flex items-center text-white rounded-sm bg-primaryColor justify-around">
                 <p>دنبال کردن</p>
                 <Image
@@ -137,13 +143,18 @@ function CourseDetails({ course }: CourseCartProps) {
           {(course.holdingMethod.includes("آنلاین") ||
             course.holdingMethod.includes("آنلاین و حضوری")) && (
             <div className="flex w-full mt-5 rounded-sm border border-strokeColor">
+              <div className="w-1/2 flex gap-2 pr-6 border-l rounded-r-[15px] border-strokeColor py-3 bg-white">
+                <p className="text-textColor text-sm font-semibold mt-1">
+                  وضعیت رویداد:
+                </p>
+                <p className="text-primaryColor text-sm font-semibold mt-1">
+                  {courseTypeDetector(course.status)}
+                </p>
+              </div>
               <div
                 onClick={() => copyHandler()}
-                className="cursor-pointer bg-white py-3 w-[40%] rounded-r-sm text-sm font-bold text-center border-l border-strokeColor"
+                className="cursor-pointer bg-tertiaryColor pl-[25px] rounded-l-sm flex justify-end border-r-sm  gap-2 w-[60%] items-center"
               >
-                کپی کردن لینک رویداد
-              </div>
-              <div className="bg-tertiaryColor pl-[25px] rounded-l-sm flex justify-end border-r-sm  gap-2 w-[60%] items-center">
                 <p className="text-sm font-semibold mt-2">{course.link}</p>
 
                 <Image
@@ -224,40 +235,51 @@ function CourseDetails({ course }: CourseCartProps) {
                 </div>
               </>
             )}
-          </div>
-          {/* وضعیت برگزاری */}
-          <div className="w-full flex border border-strokeColor rounded-[15px] mt-[17px]">
-            <div className="w-1/2 flex gap-2 pr-6 border-l rounded-r-[15px] border-strokeColor py-3 bg-tertiaryColor">
-              <p className="text-textColor text-sm font-semibold mt-1">
-                وضعیت رویداد:
-              </p>
-              <p className="text-primaryColor text-sm font-semibold mt-1">
-                {courseTypeDetector(course.status)}
-              </p>
+            <div>
+              {course.holdingMethod.includes("آنلاین") &&
+                !course.holdingMethod.includes("آنلاین و حضوری") && (
+                  <>
+                    <div className="w-full h-[1px] bg-strokeColor my-[15px]"></div>
+
+                    <div className="flex px-1 mt-[15px] items-center gap-2.5">
+                      <Link
+                        href={course.link}
+                        className=" rounded-sm bg-tertiaryColor px-1.5 py-[7px]"
+                      >
+                        <Image
+                          src="/images/icons/skyroom.svg"
+                          width={29}
+                          height={27}
+                          alt="لینک"
+                        />
+                      </Link>
+                      این رویداد در بستر اسکای روم برگزار می گردد
+                    </div>
+                  </>
+                )}
+                {course.holdingMethod.includes("آنلاین و حضوری") &&(
+<>
+                    <div className="w-full h-[1px] bg-strokeColor my-[15px]"></div>
+
+                    <div className="flex px-1 mt-[15px] items-center gap-2.5">
+                      <Link
+                        href={course.link}
+                        className=" rounded-sm bg-tertiaryColor px-1.5 py-[7px]"
+                      >
+                        <Image
+                          src="/images/icons/skyroom.svg"
+                          width={29}
+                          height={27}
+                          alt="لینک"
+                        />
+                      </Link>
+                      این رویداد در بستر اسکای رو هم برگزار می گردد.
+                    </div>
+                  </>
+                )
+                }
             </div>
-            <div className="w-1/2 px-8 text-sm flex bg-white rounded-l-[15px] py-3 items-center">
-              <div className="pl-2.5  ml-2.5 border-l border-strokeColor">
-                <p className="text-xs">4.5 از 12 رای</p>
-              </div>
-              <div className="statusRate">
-                <Rating
-                  name="user-rating-display"
-                  value={4.5}
-                  precision={0.5}
-                  readOnly
-                  sx={{
-                    direction: "ltr",
-                    "& .MuiRating-icon": { margin: 0 },
-                    "& .MuiRating-icon + .MuiRating-icon": {
-                      marginLeft: "2px",
-                      marginRight: 0,
-                    },
-                  }}
-                />
-              </div>
-            </div>
           </div>
-          {/* وضعیت برگزاری */}
           {/* سرفصل ها */}
           <div className="w-full border border-strokeColor rounded-[15px] pt-5 pb-6 mt-6 bg-white">
             <div className="flex items-center pr-2.5 gap-[5px]">
@@ -580,28 +602,34 @@ function CourseDetails({ course }: CourseCartProps) {
                 </div>
               )}
               <div className="w-full text-center">
-              <button onClick={toggleText} className="text-textColor mt-2">
-                
-                {isExpanded ? (
-                  <div className="flex items-center gap-11 border border-strokeColor rounded-sm px-4 py-2 cursor-pointer">
-                    <p>کمتر بخوان</p>
-                    <div className=" rotate-180">
-                      <Image src="/images/icons/arrow-down.svg" width={15} height={15} alt="مطلب کتر" />
+                <button onClick={toggleText} className="text-textColor mt-2">
+                  {isExpanded ? (
+                    <div className="flex items-center gap-11 border border-strokeColor rounded-sm px-4 py-2 cursor-pointer">
+                      <p>کمتر بخوان</p>
+                      <div className=" rotate-180">
+                        <Image
+                          src="/images/icons/arrow-down.svg"
+                          width={15}
+                          height={15}
+                          alt="مطلب کتر"
+                        />
+                      </div>
                     </div>
-                  </div>
-                ) : (
-                  <div className="flex items-center gap-11 border border-strokeColor rounded-sm px-4 py-2 cursor-pointer">
-                    <p>ادامه مطلب</p>
-                    <div>
-                      <Image src="/images/icons/arrow-down.svg" width={15} height={15} alt="مطلب کتر" />
+                  ) : (
+                    <div className="flex items-center gap-11 border border-strokeColor rounded-sm px-4 py-2 cursor-pointer">
+                      <p>ادامه مطلب</p>
+                      <div>
+                        <Image
+                          src="/images/icons/arrow-down.svg"
+                          width={15}
+                          height={15}
+                          alt="مطلب کتر"
+                        />
+                      </div>
                     </div>
-                  </div>
-                )}
-                
-
-              </button>
+                  )}
+                </button>
               </div>
-
             </div>
           </div>
           {/* آخر توضیحات و سرفصل و سوالات متداول */}
